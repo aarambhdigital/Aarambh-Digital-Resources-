@@ -49,6 +49,10 @@ nav a{
   font-size:14px;
 }
 
+nav a:hover{
+  text-decoration:underline;
+}
+
 .hero{
   text-align:center;
   padding:75px 20px;
@@ -77,6 +81,10 @@ nav a{
   border-radius:8px;
   text-decoration:none;
   font-weight:bold;
+}
+
+.btn:hover{
+  opacity:.9;
 }
 
 section{
@@ -149,10 +157,23 @@ section{
   color:#4d3485;
   margin-top:25px;
   margin-bottom:8px;
+  scroll-margin-top:100px;
 }
 
 .policy-box h3:first-child{
   margin-top:0;
+}
+
+.policy-link{
+  display:inline-block;
+  color:#4d3485;
+  font-weight:bold;
+  text-decoration:none;
+  margin:5px 8px;
+}
+
+.policy-link:hover{
+  text-decoration:underline;
 }
 
 .contact{
@@ -166,6 +187,15 @@ section{
   color:#4d3485;
 }
 
+.email a{
+  color:#4d3485;
+  text-decoration:none;
+}
+
+.email a:hover{
+  text-decoration:underline;
+}
+
 footer{
   background:#332252;
   color:white;
@@ -175,13 +205,32 @@ footer{
 }
 
 .footer-links{
-  margin-top:10px;
+  margin-top:15px;
+  line-height:2;
 }
 
 .footer-links a{
   color:white;
   text-decoration:none;
   margin:0 8px;
+}
+
+.footer-links a:hover{
+  text-decoration:underline;
+}
+
+.footer-policies{
+  margin-top:12px;
+}
+
+.footer-policies a{
+  color:white;
+  text-decoration:none;
+  margin:0 7px;
+}
+
+.footer-policies a:hover{
+  text-decoration:underline;
 }
 
 @media(max-width:650px){
@@ -213,6 +262,12 @@ footer{
     padding:45px 6%;
   }
 
+  .footer-links a,
+  .footer-policies a{
+    display:inline-block;
+    margin:0 5px;
+  }
+
 }
 
 </style>
@@ -231,9 +286,10 @@ footer{
   <nav>
     <a href="#home">Home</a>
     <a href="#products">Products</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="#policies">Policies</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact Us</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#terms">Terms</a>
   </nav>
 
 </header>
@@ -294,6 +350,7 @@ footer{
       <a
         href="https://imjo.in/FudKB9"
         target="_blank"
+        rel="noopener"
         class="btn">
         Buy Now
       </a>
@@ -326,6 +383,7 @@ footer{
       <a
         href="https://imjo.in/qT8Z6J"
         target="_blank"
+        rel="noopener"
         class="btn">
         Buy Now
       </a>
@@ -358,6 +416,7 @@ footer{
       <a
         href="https://imjo.in/9fZq4g"
         target="_blank"
+        rel="noopener"
         class="btn">
         Buy Now
       </a>
@@ -415,7 +474,10 @@ footer{
   </p>
 
   <p class="email">
-    📧 aarambhdigitalresources@gmail.com
+    📧
+    <a href="mailto:aarambhdigitalresources@gmail.com">
+      aarambhdigitalresources@gmail.com
+    </a>
   </p>
 
 </section>
@@ -429,9 +491,38 @@ footer{
     Policies
   </h2>
 
+  <!-- POLICY QUICK LINKS -->
+
+  <div style="text-align:center; margin-bottom:30px;">
+
+    <a href="#privacy" class="policy-link">
+      Privacy Policy
+    </a>
+
+    <a href="#refund" class="policy-link">
+      Refund & Cancellation Policy
+    </a>
+
+    <a href="#terms" class="policy-link">
+      Terms & Conditions
+    </a>
+
+    <a href="#delivery" class="policy-link">
+      Digital Product Delivery
+    </a>
+
+    <a href="#support" class="policy-link">
+      Customer Support
+    </a>
+
+  </div>
+
+
   <div class="policy-box">
 
-    <h3>
+    <!-- PRIVACY -->
+
+    <h3 id="privacy">
       Privacy Policy
     </h3>
 
@@ -439,9 +530,13 @@ footer{
       Aarambh Digital Resources respects your privacy.
       We may collect basic information such as your name,
       email address and payment-related information when
-      you purchase our digital products. This information
-      may be used to process orders, provide product access,
-      respond to customer queries and provide customer support.
+      you purchase our digital products.
+    </p>
+
+    <p style="margin-top:10px;">
+      This information may be used to process orders,
+      provide product access, respond to customer queries
+      and provide customer support.
     </p>
 
     <p style="margin-top:10px;">
@@ -452,7 +547,9 @@ footer{
     </p>
 
 
-    <h3>
+    <!-- REFUND -->
+
+    <h3 id="refund">
       Refund & Cancellation Policy
     </h3>
 
@@ -466,12 +563,16 @@ footer{
     <p style="margin-top:10px;">
       If you receive an incorrect, incomplete or technically
       defective product, please contact us at
-      aarambhdigitalresources@gmail.com. We will review the
-      issue and provide appropriate assistance.
+      <a href="mailto:aarambhdigitalresources@gmail.com">
+        aarambhdigitalresources@gmail.com
+      </a>.
+      We will review the issue and provide appropriate assistance.
     </p>
 
 
-    <h3>
+    <!-- TERMS -->
+
+    <h3 id="terms">
       Terms & Conditions
     </h3>
 
@@ -493,19 +594,27 @@ footer{
     </p>
 
 
-    <h3>
+    <!-- DELIVERY -->
+
+    <h3 id="delivery">
       Digital Product Delivery
     </h3>
 
     <p>
       Digital products are delivered electronically through
       the payment or digital delivery service used for the
-      purchase. Customers should provide accurate information
-      during checkout to ensure successful delivery.
+      purchase.
+    </p>
+
+    <p style="margin-top:10px;">
+      Customers should provide accurate information during
+      checkout to ensure successful delivery.
     </p>
 
 
-    <h3>
+    <!-- SUPPORT -->
+
+    <h3 id="support">
       Customer Support
     </h3>
 
@@ -515,7 +624,11 @@ footer{
     </p>
 
     <p style="margin-top:8px; font-weight:bold; color:#4d3485;">
-      aarambhdigitalresources@gmail.com
+      <a
+        href="mailto:aarambhdigitalresources@gmail.com"
+        style="color:#4d3485;">
+        aarambhdigitalresources@gmail.com
+      </a>
     </p>
 
   </div>
@@ -532,11 +645,22 @@ footer{
   </p>
 
   <div class="footer-links">
+
     <a href="#home">Home</a>
     <a href="#products">Products</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="#policies">Policies</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact Us</a>
+
+  </div>
+
+  <div class="footer-policies">
+
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#refund">Refund & Cancellation</a>
+    <a href="#terms">Terms & Conditions</a>
+    <a href="#delivery">Delivery Policy</a>
+    <a href="#support">Customer Support</a>
+
   </div>
 
 </footer>
