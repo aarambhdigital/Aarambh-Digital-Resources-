@@ -6,15 +6,19 @@
 
 <title>Aarambh Digital Resources | Ebooks & Printable Activities</title>
 
-<meta name="description" content="Aarambh Digital Resources offers affordable ebooks, printable kids activities, drawing sheets and educational digital resources.">
+<meta name="description" content="Aarambh Digital Resources offers affordable ebooks, printable activities, educational worksheets and useful digital resources.">
 
 <style>
+
+/* =========================
+   GENERAL
+========================= */
 
 *{
   box-sizing:border-box;
   margin:0;
   padding:0;
-  font-family:Arial,sans-serif;
+  font-family:Arial, sans-serif;
 }
 
 html{
@@ -22,648 +26,98 @@ html{
 }
 
 body{
-  background:#fffaf5;
-  color:#333;
-  line-height:1.6;
+  background:#faf7f0;
+  color:#3f4038;
+  line-height:1.7;
 }
 
+a{
+  text-decoration:none;
+}
+
+section{
+  padding:70px 7%;
+}
+
+.section-title{
+  text-align:center;
+  color:#526653;
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.section-subtitle{
+  text-align:center;
+  max-width:650px;
+  margin:0 auto 45px;
+  color:#707268;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
 header{
-  background:#6c4ab6;
-  color:white;
+  background:#f8f3e8;
+  border-bottom:1px solid #e3dfd2;
   padding:18px 7%;
   display:flex;
   justify-content:space-between;
   align-items:center;
   flex-wrap:wrap;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
 .logo{
   font-size:23px;
   font-weight:bold;
+  color:#4f6653;
 }
 
 nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:15px;
+  color:#4b5149;
+  margin-left:18px;
   font-size:14px;
+  font-weight:500;
 }
 
 nav a:hover{
-  text-decoration:underline;
+  color:#718b73;
 }
 
+
+/* =========================
+   HERO
+========================= */
+
 .hero{
+  background:#eee9dc;
   text-align:center;
-  padding:75px 20px;
-  background:#f0e8ff;
+  padding:90px 20px;
 }
 
 .hero h1{
-  font-size:42px;
-  color:#4d3485;
-  margin-bottom:15px;
+  font-size:46px;
+  color:#4f6653;
+  margin-bottom:18px;
 }
 
 .hero p{
-  max-width:680px;
+  max-width:720px;
   margin:auto;
   font-size:18px;
-  color:#555;
+  color:#60635a;
+}
+
+.hero-buttons{
+  margin-top:25px;
 }
 
 .btn{
   display:inline-block;
-  margin-top:20px;
-  background:#6c4ab6;
+  background:#657c68;
   color:white;
-  padding:12px 25px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-.btn:hover{
-  opacity:.9;
-}
-
-section{
-  padding:60px 7%;
-}
-
-.section-title{
-  text-align:center;
-  color:#4d3485;
-  font-size:30px;
-  margin-bottom:40px;
-}
-
-.products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
-  max-width:1100px;
-  margin:auto;
-}
-
-.card{
-  background:white;
-  padding:30px 25px;
-  border-radius:16px;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
-  text-align:center;
-}
-
-.product-icon{
-  font-size:58px;
-  margin-bottom:15px;
-}
-
-.card h3{
-  color:#4d3485;
-  font-size:21px;
-  margin-bottom:12px;
-}
-
-.card p{
-  color:#555;
-  font-size:15px;
-}
-
-.price{
-  font-size:23px;
-  font-weight:bold;
-  color:#333;
-  margin-top:15px;
-}
-
-.about{
-  max-width:800px;
-  margin:auto;
-  text-align:center;
-  font-size:17px;
-}
-
-.policy-box{
-  max-width:850px;
-  margin:auto;
-  background:white;
-  padding:30px;
-  border-radius:16px;
-  box-shadow:0 5px 20px rgba(0,0,0,.06);
-}
-
-.policy-box h3{
-  color:#4d3485;
-  margin-top:25px;
-  margin-bottom:8px;
-  scroll-margin-top:100px;
-}
-
-.policy-box h3:first-child{
-  margin-top:0;
-}
-
-.policy-link{
-  display:inline-block;
-  color:#4d3485;
-  font-weight:bold;
-  text-decoration:none;
-  margin:5px 8px;
-}
-
-.policy-link:hover{
-  text-decoration:underline;
-}
-
-.contact{
-  background:#f0e8ff;
-  text-align:center;
-}
-
-.email{
-  margin-top:12px;
-  font-weight:bold;
-  color:#4d3485;
-}
-
-.email a{
-  color:#4d3485;
-  text-decoration:none;
-}
-
-.email a:hover{
-  text-decoration:underline;
-}
-
-footer{
-  background:#332252;
-  color:white;
-  text-align:center;
-  padding:25px 15px;
-  font-size:14px;
-}
-
-.footer-links{
-  margin-top:15px;
-  line-height:2;
-}
-
-.footer-links a{
-  color:white;
-  text-decoration:none;
-  margin:0 8px;
-}
-
-.footer-links a:hover{
-  text-decoration:underline;
-}
-
-.footer-policies{
-  margin-top:12px;
-}
-
-.footer-policies a{
-  color:white;
-  text-decoration:none;
-  margin:0 7px;
-}
-
-.footer-policies a:hover{
-  text-decoration:underline;
-}
-
-@media(max-width:650px){
-
-  header{
-    text-align:center;
-    justify-content:center;
-  }
-
-  nav{
-    width:100%;
-    margin-top:12px;
-  }
-
-  nav a{
-    margin:0 5px;
-    font-size:13px;
-  }
-
-  .hero h1{
-    font-size:31px;
-  }
-
-  .hero p{
-    font-size:16px;
-  }
-
-  section{
-    padding:45px 6%;
-  }
-
-  .footer-links a,
-  .footer-policies a{
-    display:inline-block;
-    margin:0 5px;
-  }
-
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- HEADER -->
-
-<header>
-
-  <div class="logo">
-    Aarambh Digital Resources
-  </div>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact Us</a>
-    <a href="#privacy">Privacy</a>
-    <a href="#terms">Terms</a>
-  </nav>
-
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-  <h1>Learn. Create. Grow. ✨</h1>
-
-  <p>
-    Welcome to Aarambh Digital Resources — a collection of
-    useful ebooks, printable activity books and creative
-    digital resources for children, families and everyday learning.
-  </p>
-
-  <a href="#products" class="btn">
-    Explore Products
-  </a>
-
-</section>
-
-
-<!-- PRODUCTS -->
-
-<section id="products">
-
-  <h2 class="section-title">
-    Our Digital Products
-  </h2>
-
-  <div class="products">
-
-    <!-- RAITA EBOOK -->
-
-    <div class="card">
-
-      <div class="product-icon">
-        📖
-      </div>
-
-      <h3>
-        10 Delicious Raita Recipes
-      </h3>
-
-      <p>
-        Discover 10 easy and delicious homemade raita
-        recipes, including Boondi, Cucumber, Lauki,
-        Vegetable, Onion, Tadka, Beetroot, Palak,
-        Coriander and Mint Raita.
-      </p>
-
-      <div class="price">
-        ₹49
-      </div>
-
-      <a
-        href="https://imjo.in/FudKB9"
-        target="_blank"
-        rel="noopener"
-        class="btn">
-        Buy Now
-      </a>
-
-    </div>
-
-
-    <!-- KIDS DRAWING -->
-
-    <div class="card">
-
-      <div class="product-icon">
-        🎨
-      </div>
-
-      <h3>
-        Kids Drawing Sheets
-      </h3>
-
-      <p>
-        Fun printable drawing sheets created to encourage
-        children's creativity, imagination and artistic
-        practice.
-      </p>
-
-      <div class="price">
-        ₹49
-      </div>
-
-      <a
-        href="https://imjo.in/qT8Z6J"
-        target="_blank"
-        rel="noopener"
-        class="btn">
-        Buy Now
-      </a>
-
-    </div>
-
-
-    <!-- PRESCHOOL -->
-
-    <div class="card">
-
-      <div class="product-icon">
-        ✏️
-      </div>
-
-      <h3>
-        Preschool Drawing Worksheets
-      </h3>
-
-      <p>
-        Printable drawing worksheets for preschool children,
-        designed for creative practice and fun learning.
-        Includes a completion certificate.
-      </p>
-
-      <div class="price">
-        ₹49
-      </div>
-
-      <a
-        href="https://imjo.in/9fZq4g"
-        target="_blank"
-        rel="noopener"
-        class="btn">
-        Buy Now
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-  <h2 class="section-title">
-    About Aarambh
-  </h2>
-
-  <div class="about">
-
-    <p>
-      Aarambh Digital Resources is a digital resource platform
-      offering simple, useful and affordable digital products
-      for learning, creativity and everyday life.
-    </p>
-
-    <p style="margin-top:15px;">
-      Our resources are designed to be easy to use and suitable
-      for individuals, families and children looking for
-      convenient printable and digital learning materials.
-    </p>
-
-    <p style="margin-top:15px;">
-      We believe that small resources can make learning more
-      enjoyable, creative and accessible.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-  <h2 class="section-title">
-    Contact Us
-  </h2>
-
-  <p>
-    Have a question about our products or need assistance
-    with your purchase?
-  </p>
-
-  <p class="email">
-    📧
-    <a href="mailto:aarambhdigitalresources@gmail.com">
-      aarambhdigitalresources@gmail.com
-    </a>
-  </p>
-
-</section>
-
-
-<!-- POLICIES -->
-
-<section id="policies">
-
-  <h2 class="section-title">
-    Policies
-  </h2>
-
-  <!-- POLICY QUICK LINKS -->
-
-  <div style="text-align:center; margin-bottom:30px;">
-
-    <a href="#privacy" class="policy-link">
-      Privacy Policy
-    </a>
-
-    <a href="#refund" class="policy-link">
-      Refund & Cancellation Policy
-    </a>
-
-    <a href="#terms" class="policy-link">
-      Terms & Conditions
-    </a>
-
-    <a href="#delivery" class="policy-link">
-      Digital Product Delivery
-    </a>
-
-    <a href="#support" class="policy-link">
-      Customer Support
-    </a>
-
-  </div>
-
-
-  <div class="policy-box">
-
-    <!-- PRIVACY -->
-
-    <h3 id="privacy">
-      Privacy Policy
-    </h3>
-
-    <p>
-      Aarambh Digital Resources respects your privacy.
-      We may collect basic information such as your name,
-      email address and payment-related information when
-      you purchase our digital products.
-    </p>
-
-    <p style="margin-top:10px;">
-      This information may be used to process orders,
-      provide product access, respond to customer queries
-      and provide customer support.
-    </p>
-
-    <p style="margin-top:10px;">
-      We do not sell customer information. Information may be
-      shared with payment or service providers only when
-      necessary to process transactions or provide the requested
-      service, or when required by applicable law.
-    </p>
-
-
-    <!-- REFUND -->
-
-    <h3 id="refund">
-      Refund & Cancellation Policy
-    </h3>
-
-    <p>
-      Our products are digital products delivered electronically.
-      Because digital products can be accessed after purchase,
-      purchases are generally non-refundable once the product
-      has been delivered or accessed.
-    </p>
-
-    <p style="margin-top:10px;">
-      If you receive an incorrect, incomplete or technically
-      defective product, please contact us at
-      <a href="mailto:aarambhdigitalresources@gmail.com">
-        aarambhdigitalresources@gmail.com
-      </a>.
-      We will review the issue and provide appropriate assistance.
-    </p>
-
-
-    <!-- TERMS -->
-
-    <h3 id="terms">
-      Terms & Conditions
-    </h3>
-
-    <p>
-      By purchasing from Aarambh Digital Resources, you agree
-      to use the purchased digital products for personal use
-      unless otherwise stated.
-    </p>
-
-    <p style="margin-top:10px;">
-      Digital products may not be copied, resold, redistributed,
-      uploaded to other websites or commercially shared without
-      prior written permission.
-    </p>
-
-    <p style="margin-top:10px;">
-      Product descriptions, availability and prices may be
-      changed or updated from time to time.
-    </p>
-
-
-    <!-- DELIVERY -->
-
-    <h3 id="delivery">
-      Digital Product Delivery
-    </h3>
-
-    <p>
-      Digital products are delivered electronically through
-      the payment or digital delivery service used for the
-      purchase.
-    </p>
-
-    <p style="margin-top:10px;">
-      Customers should provide accurate information during
-      checkout to ensure successful delivery.
-    </p>
-
-
-    <!-- SUPPORT -->
-
-    <h3 id="support">
-      Customer Support
-    </h3>
-
-    <p>
-      For questions, purchase-related issues or support,
-      please contact:
-    </p>
-
-    <p style="margin-top:8px; font-weight:bold; color:#4d3485;">
-      <a
-        href="mailto:aarambhdigitalresources@gmail.com"
-        style="color:#4d3485;">
-        aarambhdigitalresources@gmail.com
-      </a>
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-  <p>
-    © 2026 Aarambh Digital Resources. All Rights Reserved.
-  </p>
-
-  <div class="footer-links">
-
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact Us</a>
-
-  </div>
-
-  <div class="footer-policies">
-
-    <a href="#privacy">Privacy Policy</a>
-    <a href="#refund">Refund & Cancellation</a>
-    <a href="#terms">Terms & Conditions</a>
-    <a href="#delivery">Delivery Policy</a>
-    <a href="#support">Customer Support</a>
-
-  </div>
-
-</footer>
-
-</body>
-</html>
+  padding:12
