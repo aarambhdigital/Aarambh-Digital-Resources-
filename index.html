@@ -56,41 +56,22 @@ color:#707268
 header{
 background:#f8f3e8;
 border-bottom:1px solid #e3dfd2;
-padding:10px 7%;
+padding:16px 7%;
 display:flex;
-justify-content:space-between;
+justify-content:center;
 align-items:center;
-flex-wrap:wrap;
 position:sticky;
 top:0;
 z-index:1000
 }
 
-.logo{
-display:flex;
-align-items:center;
-gap:14px;
-font-size:23px;
-font-weight:bold;
-color:#4f6653;
-white-space:nowrap
-}
-
-.logo img{
-width:68px;
-height:68px;
-object-fit:contain;
-display:block;
-border-radius:10px
-}
-
-.logo span{
-display:block
+nav{
+text-align:center
 }
 
 nav a{
 color:#4b5149;
-margin-left:18px;
+margin:0 10px;
 font-size:14px;
 font-weight:500
 }
@@ -400,30 +381,33 @@ margin-bottom:15px
 background:#f4f0e6
 }
 
-.coming-box{
-max-width:850px;
-margin:auto;
+.coming-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto
+}
+
+.coming-card{
+background:#fffdf8;
+border:1px solid #e4dfd2;
+border-radius:15px;
+padding:25px 20px;
 text-align:center
 }
 
-.coming-items{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:12px;
-margin-top:25px
+.coming-card h3{
+color:#536955;
+margin-bottom:8px
 }
 
-.coming-item{
-background:#fffdf8;
-border:1px solid #e4dfd2;
-padding:12px 18px;
-border-radius:25px;
-color:#586957;
+.coming-card p{
+color:#707268;
 font-size:14px
 }
 
-   
+
 /* FAQ */
 
 .faq{
@@ -496,6 +480,17 @@ font-weight:bold
 color:#536955
 }
 
+.contact-box{
+max-width:700px;
+margin:25px auto 0;
+color:#60635a
+}
+
+.contact-box a{
+color:#536955;
+font-weight:bold
+}
+
 
 /* POLICIES */
 
@@ -527,6 +522,31 @@ color:#60635a
 color:#536955
 }
 
+.policy-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto
+}
+
+.policy-card{
+background:#fffdf8;
+border:1px solid #e5e0d5;
+border-radius:15px;
+padding:25px 20px
+}
+
+.policy-card h3{
+color:#536955;
+margin-bottom:10px
+}
+
+.policy-card p{
+color:#60635a;
+font-size:14px
+}
+
 
 /* FOOTER */
 
@@ -556,6 +576,10 @@ margin-top:12px
 color:#e4eadf
 }
 
+.copyright{
+margin-top:15px
+}
+
 
 /* BACK TO TOP */
 
@@ -575,32 +599,17 @@ display:none;
 z-index:999
 }
 
+#topBtn.show{
+display:block
+}
+
 
 /* MOBILE */
 
 @media(max-width:700px){
 
 header{
-justify-content:center;
-text-align:center;
-padding:10px 5%
-}
-
-.logo{
-width:100%;
-margin-bottom:5px;
-justify-content:center;
-font-size:19px
-}
-
-.logo img{
-width:58px;
-height:58px
-}
-
-nav{
-width:100%;
-margin-top:8px
+padding:14px 5%
 }
 
 nav a{
@@ -641,14 +650,6 @@ font-size:28px
 <!-- HEADER -->
 
 <header>
-
-<div class="logo">
-
-<img src="logo.png" alt="Aarambh Digital Resources Logo">
-
-<span>Aarambh Digital Resources</span>
-
-</div>
 
 <nav>
 
@@ -737,7 +738,7 @@ Discover 10 easy and delicious homemade raita recipes, including Boondi, Cucumbe
 <div class="price">₹49</div>
 
 <a
-href="https://imjo.in/FudKB9"
+href="https://rzp.io/rzp/PYwxHS4"
 target="_blank"
 rel="noopener"
 class="btn">
@@ -746,7 +747,7 @@ Buy Now
 
 </a>
 
-<div class="secure-note">Secure payment</div>
+<div class="secure-note">Secure payment via Razorpay</div>
 
 </div>
 
@@ -979,11 +980,16 @@ Getting your digital resource is simple.
 </div>
 
 </section>
+
+
 <!-- ABOUT -->
+
 <section id="about">
+
 <h2 class="section-title">About Aarambh</h2>
 
 <div class="about">
+
 <p>
 Aarambh Digital Resources is a digital resource platform offering simple,
 useful and affordable digital products for learning, creativity and everyday life.
@@ -998,11 +1004,14 @@ families and children looking for convenient printable and digital learning mate
 We believe that small resources can make learning more enjoyable,
 creative and accessible.
 </p>
+
 </div>
+
 </section>
 
 
 <!-- COMING SOON -->
+
 <section class="coming-soon">
 
 <h2 class="section-title">Coming Soon</h2>
@@ -1010,35 +1019,52 @@ creative and accessible.
 <div class="coming-grid">
 
 <div class="coming-card">
+
 <h3>📖 Recipe Ebooks</h3>
+
 <p>Simple and useful recipe collections for everyday cooking.</p>
+
 </div>
 
 <div class="coming-card">
+
 <h3>🎨 Kids Activity Books</h3>
+
 <p>Fun activities designed to encourage creativity and learning.</p>
+
 </div>
 
 <div class="coming-card">
+
 <h3>📝 Learning Worksheets</h3>
+
 <p>Printable resources for children and early learning.</p>
+
 </div>
 
 <div class="coming-card">
+
 <h3>🖍️ Printable Activities</h3>
+
 <p>Easy-to-use activities for home and classroom practice.</p>
+
 </div>
 
 <div class="coming-card">
+
 <h3>📚 Educational Resources</h3>
+
 <p>Useful digital resources created for simple and convenient learning.</p>
+
 </div>
 
 </div>
+
 </section>
 
 
 <!-- FAQ -->
+
 <section id="faq">
 
 <h2 class="section-title">Frequently Asked Questions</h2>
@@ -1046,50 +1072,71 @@ creative and accessible.
 <div class="faq">
 
 <details>
+
 <summary>Are these physical products?</summary>
+
 <p>
 No. Aarambh Digital Resources offers digital products.
 You can access the product electronically after purchase.
 </p>
+
 </details>
 
+
 <details>
+
 <summary>How will I receive my product?</summary>
+
 <p>
 Digital products are delivered electronically through the payment
 and digital delivery service used for the purchase.
 </p>
+
 </details>
 
+
 <details>
+
 <summary>Can I print the worksheets?</summary>
+
 <p>
 Yes. If a product is described as printable, you can print it
 for personal use.
 </p>
+
 </details>
 
+
 <details>
+
 <summary>Do you offer refunds?</summary>
+
 <p>
 Please read our Refund & Cancellation Policy before purchasing
 a digital product.
 </p>
+
 </details>
 
+
 <details>
+
 <summary>How can I contact Aarambh?</summary>
+
 <p>
 You can contact us through the Contact section or email us at
 aarambhdigitalresources@gmail.com.
 </p>
+
 </details>
 
 </div>
+
 </section>
 
 
 <!-- UPDATES -->
+
 <section class="updates">
 
 <h2 class="section-title">Stay Updated</h2>
@@ -1107,6 +1154,7 @@ Keep checking Aarambh Digital Resources for new releases.
 
 
 <!-- CONTACT -->
+
 <section class="contact" id="contact">
 
 <h2 class="section-title">Contact Us</h2>
@@ -1121,9 +1169,11 @@ We would love to hear from you.
 <p><strong>📧 Email:</strong></p>
 
 <p>
+
 <a href="mailto:aarambhdigitalresources@gmail.com">
 aarambhdigitalresources@gmail.com
 </a>
+
 </p>
 
 <p>
@@ -1137,56 +1187,81 @@ please contact us by email.
 
 
 <!-- POLICIES -->
+
 <section id="policies">
 
 <h2 class="section-title">Policies & Support</h2>
 
 <div class="policy-grid">
 
+
 <div class="policy-card">
+
 <h3>🔒 Privacy Policy</h3>
+
 <p>
 We respect your privacy and aim to keep your personal information
 secure and used only for legitimate business purposes.
 </p>
+
 </div>
 
+
 <div class="policy-card">
+
 <h3>↩️ Refund & Cancellation Policy</h3>
+
 <p>
 Please review our refund and cancellation terms before purchasing
 any digital product.
 </p>
+
 </div>
 
+
 <div class="policy-card">
+
 <h3>📄 Terms & Conditions</h3>
+
 <p>
 By using this website and purchasing our digital products,
 you agree to our applicable terms and conditions.
 </p>
+
 </div>
 
+
 <div class="policy-card">
+
 <h3>📥 Digital Product Delivery</h3>
+
 <p>
 Digital products are delivered electronically after successful
 payment, according to the delivery method available for the product.
 </p>
+
 </div>
 
+
 <div class="policy-card">
+
 <h3>💬 Customer Support</h3>
+
 <p>
 For questions or assistance, please contact us at
 aarambhdigitalresources@gmail.com.
 </p>
+
 </div>
+
 
 </div>
 
 </section>
+
+
 <!-- FOOTER -->
+
 <footer>
 
 <div class="footer-content">
@@ -1219,19 +1294,25 @@ creativity and everyday life.
 
 
 <!-- BACK TO TOP BUTTON -->
+
 <button id="topBtn" aria-label="Back to top">↑</button>
 
 
 <!-- JAVASCRIPT -->
+
 <script>
 
 document.addEventListener("DOMContentLoaded", function(){
 
+
 /* PRODUCT SEARCH */
 
 const searchInput = document.getElementById("productSearch");
+
 const searchStatus = document.getElementById("searchStatus");
+
 const productCards = document.querySelectorAll(".product-card");
+
 
 if(searchInput){
 
@@ -1241,6 +1322,7 @@ const searchTerm = this.value.toLowerCase().trim();
 
 let visibleProducts = 0;
 
+
 productCards.forEach(function(card){
 
 const searchableText =
@@ -1249,6 +1331,7 @@ card.innerText +
 " " +
 (card.getAttribute("data-search") || "")
 ).toLowerCase();
+
 
 if(searchableText.includes(searchTerm)){
 
@@ -1291,6 +1374,7 @@ visibleProducts + " product" +
 
 const topBtn = document.getElementById("topBtn");
 
+
 window.addEventListener("scroll", function(){
 
 if(window.scrollY > 300){
@@ -1310,9 +1394,9 @@ topBtn.addEventListener("click", function(){
 
 window.scrollTo({
 
-top: 0,
+top:0,
 
-behavior: "smooth"
+behavior:"smooth"
 
 });
 
@@ -1322,5 +1406,6 @@ behavior: "smooth"
 
 </script>
 
+
 </body>
-</html>
+   </html>
