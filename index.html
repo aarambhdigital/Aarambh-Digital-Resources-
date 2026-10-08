@@ -1162,7 +1162,7 @@ secure and used only for legitimate business purposes.
 
 <p>
 Please review our refund and cancellation terms before purchasing
-any digital product.
+a digital product.
 </p>
 
 </div>
@@ -1246,6 +1246,8 @@ creativity and everyday life.
 
 <script>
 
+/* RAZORPAY PAYMENT */
+
 async function buyRaita(){
 
   try{
@@ -1258,7 +1260,9 @@ async function buyRaita(){
 
     if(!order.id){
 
-      alert("Unable to create payment order. Please try again.");
+      alert(
+        "Unable to create payment order. Please try again."
+      );
 
       return;
     }
@@ -1277,13 +1281,73 @@ async function buyRaita(){
 
       order_id: order.id,
 
-      handler: function(payment){
+      handler: async function(payment){
 
-        alert(
-          "Payment received. Your order is being verified."
-        );
+        try{
 
-        console.log(payment);
+          const verifyResponse = await fetch(
+            "https://winter-king-277b.amritasinghbhati140292.workers.dev/verify-payment",
+            {
+              method: "POST",
+
+              headers: {
+                "Content-Type": "application/json"
+              },
+
+              body: JSON.stringify({
+
+                razorpay_payment_id:
+                  payment.razorpay_payment_id,
+
+                razorpay_order_id:
+                  payment.razorpay_order_id,
+
+                razorpay_signature:
+                  payment.razorpay_signature
+
+              })
+            }
+          );
+
+          const result =
+            await verifyResponse.json();
+
+          if(result.success){
+
+            alert(
+              "Payment verified successfully! 🎉"
+            );
+
+            console.log(
+              "Verified payment:",
+              payment
+            );
+
+          }else{
+
+            alert(
+              "Payment verification failed. Please contact support."
+            );
+
+            console.error(
+              "Verification failed:",
+              result
+            );
+
+          }
+
+        }catch(error){
+
+          console.error(
+            "Verification error:",
+            error
+          );
+
+          alert(
+            "We could not verify the payment. Please contact support."
+          );
+
+        }
 
       },
 
@@ -1291,7 +1355,9 @@ async function buyRaita(){
 
         ondismiss: function(){
 
-          console.log("Razorpay checkout closed.");
+          console.log(
+            "Razorpay checkout closed."
+          );
 
         }
 
@@ -1305,7 +1371,8 @@ async function buyRaita(){
 
     };
 
-    const razorpay = new Razorpay(options);
+    const razorpay =
+      new Razorpay(options);
 
     razorpay.open();
 
@@ -1313,7 +1380,10 @@ async function buyRaita(){
 
   catch(error){
 
-    console.error(error);
+    console.error(
+      "Payment error:",
+      error
+    );
 
     alert(
       "Something went wrong. Please try again."
