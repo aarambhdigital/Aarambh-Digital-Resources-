@@ -50,7 +50,6 @@ margin:0 auto 40px;
 color:#707268
 }
 
-
 /* HEADER */
 
 header{
@@ -80,7 +79,6 @@ nav a:hover{
 color:#718b73
 }
 
-
 /* HERO */
 
 .hero{
@@ -106,7 +104,6 @@ color:#60635a
 margin-top:25px
 }
 
-
 /* BUTTONS */
 
 .btn{
@@ -117,7 +114,10 @@ padding:12px 26px;
 border-radius:8px;
 font-weight:bold;
 margin:6px;
-transition:.2s
+transition:.2s;
+border:1px solid #657c68;
+cursor:pointer;
+font-size:15px
 }
 
 .btn:hover{
@@ -135,7 +135,6 @@ border:1px solid #657c68
 background:#657c68;
 color:white
 }
-
 
 /* SEARCH */
 
@@ -166,7 +165,6 @@ font-size:14px;
 min-height:24px;
 margin-bottom:20px
 }
-
 
 /* PRODUCTS */
 
@@ -248,7 +246,6 @@ color:#72766d;
 margin-top:5px
 }
 
-
 /* TRUST */
 
 .trust-section{
@@ -283,7 +280,6 @@ color:#707268;
 font-size:13px
 }
 
-
 /* FEATURES */
 
 .features{
@@ -317,7 +313,6 @@ font-size:18px
 color:#707268;
 font-size:14px
 }
-
 
 /* HOW IT WORKS */
 
@@ -359,7 +354,6 @@ color:#686b62;
 font-size:14px
 }
 
-
 /* ABOUT */
 
 .about{
@@ -373,7 +367,6 @@ color:#60635a
 .about p{
 margin-bottom:15px
 }
-
 
 /* COMING SOON */
 
@@ -407,7 +400,6 @@ color:#707268;
 font-size:14px
 }
 
-
 /* FAQ */
 
 .faq{
@@ -434,7 +426,6 @@ margin-top:12px;
 color:#696c63;
 font-size:15px
 }
-
 
 /* UPDATES */
 
@@ -463,7 +454,6 @@ color:#686b62;
 margin-bottom:18px
 }
 
-
 /* CONTACT */
 
 .contact{
@@ -490,7 +480,6 @@ color:#60635a
 color:#536955;
 font-weight:bold
 }
-
 
 /* POLICIES */
 
@@ -547,7 +536,6 @@ color:#60635a;
 font-size:14px
 }
 
-
 /* FOOTER */
 
 footer{
@@ -580,7 +568,6 @@ color:#e4eadf
 margin-top:15px
 }
 
-
 /* BACK TO TOP */
 
 #topBtn{
@@ -602,7 +589,6 @@ z-index:999
 #topBtn.show{
 display:block
 }
-
 
 /* MOBILE */
 
@@ -646,7 +632,6 @@ font-size:28px
 
 <body>
 
-
 <!-- HEADER -->
 
 <header>
@@ -665,7 +650,6 @@ font-size:28px
 
 </header>
 
-
 <!-- HERO -->
 
 <section class="hero" id="home">
@@ -673,9 +657,7 @@ font-size:28px
 <h1>Learn. Create. Grow. ✨</h1>
 
 <p>
-
 Welcome to Aarambh Digital Resources — a thoughtfully created collection of ebooks, printable activities, educational worksheets and useful digital resources designed to make learning and creativity simple.
-
 </p>
 
 <div class="hero-buttons">
@@ -688,7 +670,6 @@ Welcome to Aarambh Digital Resources — a thoughtfully created collection of eb
 
 </section>
 
-
 <!-- PRODUCTS -->
 
 <section id="products">
@@ -696,9 +677,7 @@ Welcome to Aarambh Digital Resources — a thoughtfully created collection of eb
 <h2 class="section-title">Our Digital Products</h2>
 
 <p class="section-subtitle">
-
 Simple, affordable and convenient digital resources that you can access from the comfort of your home.
-
 </p>
 
 <div class="featured-label">Featured Products</div>
@@ -717,7 +696,6 @@ autocomplete="off">
 
 <div class="products">
 
-
 <!-- PRODUCT 1 -->
 
 <div class="card product-card"
@@ -730,27 +708,23 @@ data-search="raita recipes food ebook boondi cucumber lauki vegetable onion tadk
 <h3>10 Delicious Raita Recipes</h3>
 
 <p>
-
 Discover 10 easy and delicious homemade raita recipes, including Boondi, Cucumber, Lauki, Vegetable, Onion, Tadka, Beetroot, Palak, Coriander and Mint Raita.
-
 </p>
 
 <div class="price">₹49</div>
 
-<a
-href="https://rzp.io/rzp/PYwxHS4"
-target="_blank"
-rel="noopener"
-class="btn">
+<button
+type="button"
+class="btn"
+onclick="buyRaita()">
 
 Buy Now
 
-</a>
+</button>
 
 <div class="secure-note">Secure payment via Razorpay</div>
 
 </div>
-
 
 <!-- PRODUCT 2 -->
 
@@ -762,9 +736,7 @@ data-search="kids drawing sheets children creativity imagination artistic printa
 <h3>Kids Drawing Sheets</h3>
 
 <p>
-
 Fun printable drawing sheets created to encourage children's creativity, imagination and artistic practice.
-
 </p>
 
 <div class="price">₹49</div>
@@ -783,7 +755,6 @@ Buy Now
 
 </div>
 
-
 <!-- PRODUCT 3 -->
 
 <div class="card product-card"
@@ -794,9 +765,7 @@ data-search="preschool drawing worksheets children creative practice learning pr
 <h3>Preschool Drawing Worksheets</h3>
 
 <p>
-
 Printable drawing worksheets for preschool children, designed for creative practice and fun learning. Includes a completion certificate.
-
 </p>
 
 <div class="price">₹49</div>
@@ -815,11 +784,9 @@ Buy Now
 
 </div>
 
-
 </div>
 
 </section>
-
 
 <!-- TRUST -->
 
@@ -863,7 +830,6 @@ Buy Now
 
 </section>
 
-
 <!-- WHY AARAMBH -->
 
 <section id="why">
@@ -871,9 +837,7 @@ Buy Now
 <h2 class="section-title">Why Choose Aarambh?</h2>
 
 <p class="section-subtitle">
-
 We keep our digital resources simple, useful and affordable.
-
 </p>
 
 <div class="features">
@@ -922,7 +886,6 @@ We keep our digital resources simple, useful and affordable.
 
 </section>
 
-
 <!-- HOW IT WORKS -->
 
 <section class="how-section" id="how">
@@ -930,9 +893,7 @@ We keep our digital resources simple, useful and affordable.
 <h2 class="section-title">How It Works</h2>
 
 <p class="section-subtitle">
-
 Getting your digital resource is simple.
-
 </p>
 
 <div class="steps">
@@ -981,7 +942,6 @@ Getting your digital resource is simple.
 
 </section>
 
-
 <!-- ABOUT -->
 
 <section id="about">
@@ -1008,7 +968,6 @@ creative and accessible.
 </div>
 
 </section>
-
 
 <!-- COMING SOON -->
 
@@ -1062,7 +1021,6 @@ creative and accessible.
 
 </section>
 
-
 <!-- FAQ -->
 
 <section id="faq">
@@ -1082,7 +1040,6 @@ You can access the product electronically after purchase.
 
 </details>
 
-
 <details>
 
 <summary>How will I receive my product?</summary>
@@ -1093,7 +1050,6 @@ and digital delivery service used for the purchase.
 </p>
 
 </details>
-
 
 <details>
 
@@ -1106,7 +1062,6 @@ for personal use.
 
 </details>
 
-
 <details>
 
 <summary>Do you offer refunds?</summary>
@@ -1117,7 +1072,6 @@ a digital product.
 </p>
 
 </details>
-
 
 <details>
 
@@ -1133,7 +1087,6 @@ aarambhdigitalresources@gmail.com.
 </div>
 
 </section>
-
 
 <!-- UPDATES -->
 
@@ -1151,7 +1104,6 @@ Keep checking Aarambh Digital Resources for new releases.
 </p>
 
 </section>
-
 
 <!-- CONTACT -->
 
@@ -1185,7 +1137,6 @@ please contact us by email.
 
 </section>
 
-
 <!-- POLICIES -->
 
 <section id="policies">
@@ -1193,7 +1144,6 @@ please contact us by email.
 <h2 class="section-title">Policies & Support</h2>
 
 <div class="policy-grid">
-
 
 <div class="policy-card">
 
@@ -1206,7 +1156,6 @@ secure and used only for legitimate business purposes.
 
 </div>
 
-
 <div class="policy-card">
 
 <h3>↩️ Refund & Cancellation Policy</h3>
@@ -1217,7 +1166,6 @@ any digital product.
 </p>
 
 </div>
-
 
 <div class="policy-card">
 
@@ -1230,7 +1178,6 @@ you agree to our applicable terms and conditions.
 
 </div>
 
-
 <div class="policy-card">
 
 <h3>📥 Digital Product Delivery</h3>
@@ -1241,7 +1188,6 @@ payment, according to the delivery method available for the product.
 </p>
 
 </div>
-
 
 <div class="policy-card">
 
@@ -1254,11 +1200,9 @@ aarambhdigitalresources@gmail.com.
 
 </div>
 
-
 </div>
 
 </section>
-
 
 <!-- FOOTER -->
 
@@ -1292,36 +1236,115 @@ creativity and everyday life.
 
 </footer>
 
-
-<!-- BACK TO TOP BUTTON -->
+<!-- BACK TO TOP -->
 
 <button id="topBtn" aria-label="Back to top">↑</button>
 
+<!-- RAZORPAY CHECKOUT -->
 
-<!-- JAVASCRIPT -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function(){
+async function buyRaita(){
+
+  try{
+
+    const response = await fetch(
+      "https://winter-king-277b.amritasinghbhati140292.workers.dev/create-order"
+    );
+
+    const order = await response.json();
+
+    if(!order.id){
+
+      alert("Unable to create payment order. Please try again.");
+
+      return;
+    }
+
+    const options = {
+
+      key: order.key_id,
+
+      amount: order.amount,
+
+      currency: order.currency,
+
+      name: "Aarambh Digital Resources",
+
+      description: "10 Delicious Raita Recipes",
+
+      order_id: order.id,
+
+      handler: function(payment){
+
+        alert(
+          "Payment received. Your order is being verified."
+        );
+
+        console.log(payment);
+
+      },
+
+      modal: {
+
+        ondismiss: function(){
+
+          console.log("Razorpay checkout closed.");
+
+        }
+
+      },
+
+      theme: {
+
+        color:"#657c68"
+
+      }
+
+    };
+
+    const razorpay = new Razorpay(options);
+
+    razorpay.open();
+
+  }
+
+  catch(error){
+
+    console.error(error);
+
+    alert(
+      "Something went wrong. Please try again."
+    );
+
+  }
+
+}
 
 
 /* PRODUCT SEARCH */
 
-const searchInput = document.getElementById("productSearch");
+document.addEventListener("DOMContentLoaded", function(){
 
-const searchStatus = document.getElementById("searchStatus");
+const searchInput =
+document.getElementById("productSearch");
 
-const productCards = document.querySelectorAll(".product-card");
+const searchStatus =
+document.getElementById("searchStatus");
 
+const productCards =
+document.querySelectorAll(".product-card");
 
 if(searchInput){
 
 searchInput.addEventListener("input", function(){
 
-const searchTerm = this.value.toLowerCase().trim();
+const searchTerm =
+this.value.toLowerCase().trim();
 
 let visibleProducts = 0;
-
 
 productCards.forEach(function(card){
 
@@ -1331,7 +1354,6 @@ card.innerText +
 " " +
 (card.getAttribute("data-search") || "")
 ).toLowerCase();
-
 
 if(searchableText.includes(searchTerm)){
 
@@ -1347,19 +1369,24 @@ card.style.display = "none";
 
 });
 
-
 if(searchTerm === ""){
 
 searchStatus.textContent = "";
 
-}else if(visibleProducts === 0){
+}
 
-searchStatus.textContent = "No products found.";
-
-}else{
+else if(visibleProducts === 0){
 
 searchStatus.textContent =
-visibleProducts + " product" +
+"No products found.";
+
+}
+
+else{
+
+searchStatus.textContent =
+visibleProducts +
+" product" +
 (visibleProducts > 1 ? "s" : "") +
 " found.";
 
@@ -1372,8 +1399,8 @@ visibleProducts + " product" +
 
 /* BACK TO TOP */
 
-const topBtn = document.getElementById("topBtn");
-
+const topBtn =
+document.getElementById("topBtn");
 
 window.addEventListener("scroll", function(){
 
@@ -1381,14 +1408,15 @@ if(window.scrollY > 300){
 
 topBtn.classList.add("show");
 
-}else{
+}
+
+else{
 
 topBtn.classList.remove("show");
 
 }
 
 });
-
 
 topBtn.addEventListener("click", function(){
 
@@ -1406,6 +1434,5 @@ behavior:"smooth"
 
 </script>
 
-
 </body>
-   </html>
+</html>
