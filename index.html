@@ -1,163 +1,292 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="description" content="Discover digital ebooks, preschool worksheets, drawing sheets and educational resources at Aarambh Digital Resources.">
+<meta name="robots" content="index, follow">
 <title>Aarambh Digital Resources | Ebooks & Worksheets</title>
-<meta name="description" content="Discover affordable ebooks, printable worksheets, bedtime stories and digital learning resources from Aarambh Digital Resources.">
-
-<meta name="theme-color" content="#f8f7ef">
 
 <style>
+:root {
+  --green: #285c45;
+  --green-dark: #194431;
+  --cream: #fbf7ec;
+  --cream-dark: #f0e8d6;
+  --text: #30382f;
+  --white: #ffffff;
+  --muted: #687269;
+}
+
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 20px;
+  scroll-padding-top: 85px;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  color: #293b31;
-  background: #f8f7ef;
-  line-height: 1.7;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-nav {
-  background: #fffdf5;
-  padding: 14px 6%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  border-bottom: 1px solid #e1e8dd;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.logo img {
-  display: block;
-  width: 190px;
+img {
   max-width: 100%;
-  height: auto;
-  max-height: 85px;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: auto;
+}
+
+header {
+  background: var(--cream);
+  border-bottom: 1px solid #e5dece;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--green);
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.brand img {
+  width: 46px;
+  height: 46px;
   object-fit: contain;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
+  gap: 17px;
   flex-wrap: wrap;
-  gap: 8px 18px;
-}
-
-nav a {
-  color: #285c43;
-  text-decoration: none;
   font-size: 14px;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.nav-links a:hover {
+  color: var(--green);
 }
 
 .hero {
+  padding: 75px 0;
   text-align: center;
-  padding: 75px 7%;
-  background: linear-gradient(135deg, #e7efdf, #fff8e8);
+  background: linear-gradient(135deg, #f8f1df, #e5eddf);
 }
 
-.hero h1 {
-  font-family: Georgia, serif;
-  color: #285c43;
-  font-size: 38px;
-  line-height: 1.3;
-  margin-bottom: 16px;
+.eyebrow {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: var(--green-dark);
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.2;
+  margin: 15px auto;
+  max-width: 800px;
 }
 
 .hero p {
   max-width: 650px;
-  margin: 0 auto 25px;
-  color: #526456;
+  margin: 16px auto 25px;
+  color: #586259;
+  font-size: 17px;
 }
 
 .btn {
   display: inline-block;
-  background: #285c43;
-  color: #ffffff;
+  background: var(--green);
+  color: var(--white);
   padding: 12px 23px;
-  border-radius: 8px;
-  text-decoration: none;
+  border-radius: 7px;
   font-weight: bold;
-  border: none;
+  border: 1px solid var(--green);
   cursor: pointer;
-  transition: background 0.2s;
 }
 
 .btn:hover {
-  background: #1d4632;
+  background: var(--green-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--green);
 }
 
 section {
-  padding: 55px 7%;
-  max-width: 1150px;
+  padding: 62px 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin: 0 auto 30px;
+}
+
+.section-heading h2 {
+  color: var(--green-dark);
+  font-size: clamp(25px, 4vw, 34px);
+  margin: 0 0 8px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  max-width: 650px;
   margin: auto;
 }
 
-h2 {
-  font-family: Georgia, serif;
-  color: #285c43;
-  text-align: center;
-  font-size: 29px;
-  margin-bottom: 28px;
+.search-box {
+  display: block;
+  width: min(500px, 100%);
+  padding: 13px 15px;
+  margin: 0 auto 28px;
+  border: 1px solid #d8d9cc;
+  border-radius: 8px;
+  background: var(--white);
+  font-size: 16px;
 }
 
-.grid {
+.product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 23px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
 }
 
-.card {
-  background: #fffdf7;
-  border: 1px solid #e0e8dc;
-  border-radius: 15px;
+.product-card {
+  background: var(--white);
+  border: 1px solid #e9e4d7;
+  border-radius: 14px;
   padding: 25px;
-  box-shadow: 0 4px 14px rgba(40, 92, 67, 0.06);
+  box-shadow: 0 5px 18px rgba(37, 67, 47, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.card h3 {
-  color: #285c43;
+.product-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  background: #edf3e8;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  margin-bottom: 13px;
+}
+
+.product-card h3 {
+  color: var(--green-dark);
+  margin: 0 0 8px;
   font-size: 21px;
-  margin-bottom: 12px;
 }
 
-.card p {
-  margin-bottom: 10px;
-  color: #566257;
+.product-card p {
+  color: var(--muted);
+  margin: 0 0 15px;
 }
 
 .price {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: bold;
-  color: #285c43;
-  margin: 16px 0;
+  color: var(--green);
+  margin: auto 0 16px;
+  padding-top: 8px;
 }
 
-.product-note {
-  font-size: 13px;
-  color: #69756b;
+.product-card .btn {
+  text-align: center;
+  width: 100%;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.benefit {
+  background: var(--white);
+  padding: 23px;
+  border-radius: 12px;
+  border: 1px solid #e9e4d7;
+}
+
+.benefit h3 {
+  color: var(--green);
+  margin: 8px 0;
+}
+
+.benefit-icon {
+  font-size: 28px;
+}
+
+.soft-section {
+  background: #f1ecde;
+}
+
+.steps {
+  max-width: 720px;
+  margin: auto;
+  display: grid;
+  gap: 16px;
+}
+
+.step {
+  display: flex;
+  gap: 16px;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 19px;
+}
+
+.step-number {
+  flex: 0 0 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  background: var(--green);
+  color: var(--white);
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.step h3 {
+  margin: 0 0 5px;
+  color: var(--green-dark);
+}
+
+.step p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .about-box {
@@ -166,124 +295,117 @@ h2 {
   text-align: center;
 }
 
-.steps .card {
-  text-align: center;
+.about-box p {
+  color: #596359;
 }
 
-.step-number {
-  color: #b18a45;
-  font-size: 30px;
-  font-weight: bold;
+.faq-list {
+  max-width: 800px;
+  margin: auto;
 }
 
-.policy {
-  max-width: 850px;
-}
-
-.policy h2 {
-  margin-bottom: 20px;
-}
-
-.policy h3 {
-  color: #285c43;
-  margin-top: 20px;
-  margin-bottom: 8px;
-}
-
-.policy p {
+details {
+  background: var(--white);
+  padding: 17px 20px;
   margin-bottom: 12px;
+  border: 1px solid #e7e1d4;
+  border-radius: 9px;
 }
 
-.contact {
-  max-width: none;
+summary {
+  color: var(--green-dark);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+details p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.contact-box {
+  max-width: 700px;
+  margin: auto;
   text-align: center;
-  background: #e7efdf;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid #e9e4d7;
 }
 
-.contact a {
-  color: #285c43;
+.contact-box a {
+  color: var(--green);
+  font-weight: bold;
   overflow-wrap: anywhere;
 }
 
 footer {
-  background: #234b37;
-  color: #fffdf5;
+  background: var(--green-dark);
+  color: var(--white);
+  padding: 30px 0;
   text-align: center;
-  padding: 24px 6%;
+}
+
+footer p {
+  margin: 7px 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 12px 0;
   font-size: 14px;
 }
 
-footer a {
-  color: #fffdf5;
-  margin: 0 8px;
-  text-decoration: none;
-}
-
-footer a:hover {
+.footer-links a {
   text-decoration: underline;
-}
-
-.small {
-  text-align: center;
-  color: #69756b;
-  font-size: 13px;
-  margin-top: 22px;
 }
 
 .back-top {
   position: fixed;
-  right: 16px;
-  bottom: 16px;
-  background: #285c43;
-  color: white;
-  padding: 10px 14px;
+  right: 17px;
+  bottom: 17px;
+  background: var(--green);
+  color: var(--white);
+  padding: 11px 14px;
   border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 3px 10px #0002;
-  z-index: 10;
+  box-shadow: 0 3px 12px #0002;
 }
 
-@media (max-width: 650px) {
-  nav {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 14px 5%;
-  }
+.no-results {
+  display: none;
+  text-align: center;
+  color: var(--muted);
+  padding: 15px;
+}
 
-  .logo {
+@media (max-width: 700px) {
+  .navbar {
     justify-content: center;
-    width: 100%;
-  }
-
-  .logo img {
-    width: 165px;
-    max-height: 75px;
   }
 
   .nav-links {
     justify-content: center;
-    gap: 6px 16px;
+    gap: 12px;
   }
 
   .hero {
-    padding: 55px 6%;
-  }
-
-  .hero h1 {
-    font-size: 31px;
+    padding: 52px 0;
   }
 
   section {
-    padding: 42px 6%;
+    padding: 45px 0;
   }
 
-  h2 {
-    font-size: 26px;
-  }
-
-  .grid {
+  .product-grid,
+  .benefit-grid {
     grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    padding: 21px;
   }
 }
 </style>
@@ -291,225 +413,853 @@ footer a:hover {
 
 <body id="top">
 
-<nav aria-label="Main navigation">
-  <a class="logo" href="#top" aria-label="Aarambh Digital Resources home">
-    <img src="./logo.png"
-         alt="Aarambh Digital Resources"
-         onerror="this.style.display='none'; this.parentElement.insertAdjacentText('beforeend','Aarambh Digital Resources');">
-  </a>
+<header>
+  <div class="container navbar">
+    <a class="brand" href="#top">
+      <img src="./aarambh_logo.png" alt="Aarambh Digital Resources logo">
+      <span>Aarambh Digital Resources</span>
+    </a>
 
-  <div class="nav-links">
-    <a href="#products">Products</a>
-    <a href="#about">About</a>
-    <a href="#how">How It Works</a>
-    <a href="#contact">Contact</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#top">Home</a>
+      <a href="#products">Products</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
-</nav>
-
-<header class="hero">
-  <h1>Learn, Create &amp; Grow</h1>
-  <p>
-    Discover useful digital resources, delicious recipes,
-    creative activities and learning materials for everyday life.
-  </p>
-  <a class="btn" href="#products">Explore Products</a>
 </header>
 
-<section id="products">
-  <h2>Our Digital Products</h2>
-
-  <div class="grid">
-
-    <article class="card">
-      <h3>🥗 10 Delicious Raita Recipes</h3>
+<main>
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Learn • Create • Grow</p>
+      <h1>Digital Resources for Everyday Learning</h1>
       <p>
-        Explore 10 easy and delicious raita recipes made
-        with simple ingredients for everyday meals.
+        Explore practical ebooks, kids' drawing sheets, preschool worksheets
+        and bedtime stories designed to make learning simple and enjoyable.
       </p>
-      <p class="product-note">
-        10 recipes · Digital PDF · Easy ingredients
-      </p>
-      <div class="price">₹49</div>
-      <a class="btn"
-         href="https://payhip.com/b/etgHK"
-         target="_blank"
-         rel="noopener noreferrer">
-        Buy Now
-      </a>
-    </article>
-
-    <article class="card">
-      <h3>🎨 Kids Drawing Worksheets</h3>
-      <p>
-        Printable drawing activities to encourage children's
-        creativity, imagination and enjoyable learning.
-      </p>
-      <p class="product-note">
-        Printable PDF · Creative activities
-      </p>
-      <div class="price">₹119</div>
-      <a class="btn"
-         href="https://payhip.com/b/P8pZG"
-         target="_blank"
-         rel="noopener noreferrer">
-        Buy Now
-      </a>
-    </article>
-
-    <article class="card">
-      <h3>🌙 Bedtime Stories</h3>
-      <p>
-        Gentle bedtime stories for young children to enjoy
-        during quiet time and before sleeping.
-      </p>
-      <p class="product-note">
-        Digital stories · For young children
-      </p>
-      <div class="price">₹129</div>
-      <a class="btn"
-         href="https://payhip.com/b/hN18q"
-         target="_blank"
-         rel="noopener noreferrer">
-        Buy Now
-      </a>
-    </article>
-
-    <article class="card">
-      <h3>✏️ Preschool Kids Tracing Worksheets</h3>
-      <p>
-        Early-learning tracing activities designed to help
-        preschool children practise pencil control and tracing.
-      </p>
-      <p class="product-note">
-        Printable PDF · Preschool practice
-      </p>
-      <div class="price">₹99</div>
-      <a class="btn"
-         href="https://payhip.com/b/um6Ef"
-         target="_blank"
-         rel="noopener noreferrer">
-        Buy Now
-      </a>
-    </article>
-
-  </div>
-
-  <p class="small">
-    Digital products are delivered electronically.
-    No physical product will be shipped.
-  </p>
-</section>
-
-<section id="about">
-  <div class="about-box">
-    <h2>About Aarambh</h2>
-    <p>
-      Aarambh Digital Resources creates simple, affordable
-      digital resources for children, learners and everyday life.
-      Our aim is to make useful content easy to discover and use
-      from the comfort of home.
-    </p>
-  </div>
-</section>
-
-<section id="how">
-  <h2>How It Works</h2>
-
-  <div class="grid steps">
-    <div class="card">
-      <div class="step-number">01</div>
-      <h3>Choose</h3>
-      <p>Select the digital product you want to purchase.</p>
+      <a class="btn" href="#products">Explore Our Products</a>
+      <a class="btn btn-outline" href="#about">Discover Aarambh</a>
     </div>
+  </section>
 
-    <div class="card">
-      <div class="step-number">02</div>
-      <h3>Pay Securely</h3>
-      <p>Use the payment options shown on the Payhip checkout page.</p>
+  <section id="products">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Digital Products</h2>
+        <p>Discover useful digital resources for your home, children and learning journey.</p>
+      </div>
+
+      <input
+        class="search-box"
+        type="search"
+        id="productSearch"
+        placeholder="Search ebooks and worksheets..."
+        aria-label="Search digital products"
+      >
+
+      <div class="product-grid">
+
+<!
+        <article class="product-card" data-search="raita recipes food cooking ebook indian recipes">
+          <div class="product-icon">🥗</div>
+          <h3>10 Delicious Raita Recipes</h3>
+          <p>Discover delicious Indian raita recipes to complement your everyday meals.</p>
+          <div class="price">₹49</div>
+          <a class="btn" href="https://payhip.com/b/etgHK" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+        <article class="product-card" data-search="kids drawing sheets children art colouring">
+          <div class="product-icon">🎨</div>
+          <h3>Kids Drawing Sheets</h3>
+          <p>Creative drawing activities to encourage children's imagination and artistic skills.</p>
+          <div class="price">₹119</div>
+          <a class="btn" href="https://payhip.com/b/P8pZG" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+        <article class="product-card" data-search="bedtime stories little ones children lion turtle">
+          <div class="product-icon">🌙</div>
+          <h3>Bedtime Stories for Little Ones</h3>
+          <p>Enjoy engaging little stories for peaceful bedtime reading with young children.</p>
+          <div class="price">₹129</div>
+          <a class="btn" href="https://payhip.com/b/hN18q" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+        <article class="product-card" data-search="preschool tracing worksheets letters numbers handwriting learning">
+          <div class="product-icon">✏️</div>
+          <h3>Preschool Tracing Worksheets</h3>
+          <p>Printable tracing practice to help preschoolers build early writing skills.</p>
+          <div class="price">₹99</div>
+          <a class="btn" href="https://payhip.com/b/um6Ef" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+      </div>
+      <p class="no-results" id="noResults">No matching products found. Try another search.</p>
     </div>
+  </section>
 
-    <div class="card">
-      <div class="step-number">03</div>
-      <h3>Receive Your PDF</h3>
-      <p>
-        After successful payment, follow Payhip's download
-        instructions to access your digital product.
-      </p>
+  <section class="soft-section" id="why-us">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Why Choose Aarambh?</h2>
+        <p>Simple, practical resources made to support learning and creativity.</p>
+      </div>
+
+      <div class="benefit-grid">
+        <div class="benefit">
+          <div class="benefit-icon">📚</div>
+          <h3>Practical Resources</h3>
+          <p>Explore useful digital materials for everyday learning and family activities.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">🏡</div>
+          <h3>Learn at Home</h3>
+          <p>Use digital resources at your own pace and at a time that suits you.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">🌱</div>
+          <h3>Learn and Grow</h3>
+          <p>Discover resources that encourage creativity, practice and continuous learning.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="refund" class="policy">
-  <h2>Refund &amp; Cancellation Policy</h2>
-  <p>
-    Our products are digital downloads, not physical items.
-    Please review the product description before purchasing.
-  </p>
-  <p>
-    If you complete a payment but cannot access your purchase,
-    contact us with your order details so we can help resolve
-    the issue. Any refund request will be reviewed in accordance
-    with applicable law and the terms shown at checkout.
-  </p>
-</section>
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-heading">
+        <h2>How It Works</h2>
+        <p>Getting your digital product is simple.</p>
+      </div>
 
-<section id="privacy" class="policy">
-  <h2>Privacy Policy</h2>
-  <p>
-    When you contact us, we may receive the information you
-    choose to provide, such as your name and email address.
-  </p>
-  <p>
-    Purchases and payments made through Payhip are also subject
-    to Payhip's privacy practices and applicable payment
-    provider policies.
-  </p>
-  <p>
-    We use enquiries and order-related information to respond
-    to customers and provide support. We do not intentionally
-    publish customers' private information.
-  </p>
-</section>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div>
+            <h3>Choose a Product</h3>
+            <p>Browse our collection and select the ebook or worksheet you need.</p>
+          </div>
+        </div>
 
-<section id="terms" class="policy">
-  <h2>Terms &amp; Conditions</h2>
-  <p>
-    Products sold through this website are digital products.
-    No physical item will be shipped.
-  </p>
-  <p>
-    Unless otherwise stated, purchased resources are for
-    personal use. You may not resell, redistribute or publicly
-    share the files without permission.
-  </p>
-  <p>
-    Product descriptions and prices may change. Please review
-    the information displayed at checkout before purchasing.
-  </p>
-</section>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div>
+            <h3>Complete Your Purchase</h3>
+            <p>Tap Buy Now to visit the product checkout page on Payhip.</p>
+          </div>
+        </div>
 
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <p>
-    Have a question about a product, order or download?
-  </p>
-  <p>
-    <a href="mailto:aarambhdigitalresources@gmail.com">
-      aarambhdigitalresources@gmail.com
-    </a>
-  </p>
-</section>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div>
+            <h3>Access Your Digital Download</h3>
+            <p>Follow the instructions on Payhip to receive your purchased digital product.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft-section" id="about">
+    <div class="container">
+      <div class="section-heading">
+        <h2>About Aarambh Digital Resources</h2>
+      </div>
+
+      <div class="about-box">
+        <p>
+          Aarambh Digital Resources is a digital resource brand focused on
+          practical ebooks, printable worksheets and learning materials for
+          families, children and everyday learners.
+        </p>
+        <p>
+          Our aim is to make useful digital resources accessible and convenient
+          so you can learn, practise and create at your own pace.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Frequently Asked Questions</h2>
+        <p>Some helpful information before you purchase.</p>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>What are digital products?</summary>
+          <p>Digital products are downloadable resources such as ebooks and printable worksheets that you can access electronically.</p>
+        </details>
+
+        <details>
+          <summary>How do I purchase a product?</summary>
+          <p>Choose a product, tap Buy Now and complete the purchase through its Payhip checkout page.</p>
+        </details>
+
+        <details>
+          <summary>How will I receive my purchase?</summary>
+          <p>Delivery instructions are provided through Payhip. Check the checkout and confirmation emails for your download link.</p>
+        </details>
+
+        <details>
+          <summary>Can I print the worksheets?</summary>
+          <p>Printing depends on the file format and the terms provided with the product. Check the individual product description before purchasing.</p>
+        </details>
+
+        <details>
+          <summary>Can I get a refund?</summary>
+          <p>Please read our refund policy and the applicable terms displayed on the product checkout page before purchasing.</p>
+        </details>
+
+        <details>
+          <summary>How can I contact you?</summary>
+          <p>You can email us at <a href="mailto:aarambhdigitalresources@gmail.com">aarambhdigitalresources@gmail.com</a>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft-section" id="policies">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Policies</h2>
+        <p>Please review our policies before placing an order.</p>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>Digital Product Policy</summary>
+          <p>Products are supplied digitally. No physical item will be shipped unless a product description specifically states otherwise. Please check the product details before purchasing.</p>
+        </details>
+
+        <details>
+          <summary>Refund and Cancellation Policy</summary>
+          <p>Because digital products may be delivered immediately, refunds and cancellations are subject to the applicable product terms and consumer protection laws. If you experience a payment or download issue, contact us for assistance.</p>
+        </details>
+
+        <details>
+          <summary>Privacy Policy</summary>
+          <p>When you contact us, we may receive the information you provide, such as your email address and message. Payments and checkout information are handled by the payment platform according to its privacy policy. We do not intend to collect unnecessary personal information through this website.</p>
+        </details>
+
+        <details>
+          <summary>Terms of Use</summary>
+          <p>Digital resources are intended for personal use unless a product description grants additional rights. Do not redistribute, resell or republish purchased files without permission from the rights holder.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Get in Touch</h2>
+        <p>Questions about our products? We would be happy to hear from you.</p>
+      </div>
+
+      <div class="contact-box">
+        <p><strong>Aarambh Digital Resources</strong></p>
+        <p>Email us for product questions or purchase assistance.</p>
+        <p>
+          <a href="mailto:aarambhdigitalresources@gmail.com">
+            aarambhdigitalresources@gmail.com
+          </a>
+        </p>
+        <a class="btn" href="mailto:aarambhdigitalresources@gmail.com">Email Us</a>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer>
-  <p>© 2026 Aarambh Digital Resources. All rights reserved.</p>
-  <p style="margin-top:10px">
-    <a href="#privacy">Privacy Policy</a>
-    <a href="#refund">Refund Policy</a>
-    <a href="#terms">Terms &amp; Conditions</a>
-  </p>
+  <div class="container">
+    <p><strong>Aarambh Digital Resources</strong></p>
+    <p>Learn • Create • Grow</p>
+
+    <div class="footer-links">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#policies">Policies</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <p>&copy; <span id="currentYear"></span> Aarambh Digital Resources. All rights reserved.</p>
+  </div>
 </footer>
 
 <a class="back-top" href="#top" aria-label="Back to top">↑</a>
 
+<script>
+const searchInput = document.getElementById("productSearch");
+const productCards = document.querySelectorAll(".product-card");
+const noResults = document.getElementById("noResults");
+
+searchInput.addEventListener("input", function () {
+  const searchTerm = this.value.toLowerCase().trim();
+  let visibleCount = 0;
+
+  productCards.forEach(function (card) {
+    const searchableText = (
+      card.innerText + " " + (card.dataset.search || "")
+    ).toLowerCase();
+
+    const matches = searchableText.includes(searchTerm);
+
+    card.style.display = matches ? "flex" : "none";
+
+    if (matches) {
+      visibleCount++;
+    }
+  });
+
+  noResults.style.display = visibleCount === 0 ? "block" : "none";
+});
+
+document.getElementById("currentYear").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+  </html>
+
+        <article class="product-card" data-search="raita recipes food cooking ebook indian recipes">
+          <div class="product-icon">🥗</div>
+          <h3>10 Delicious Raita Recipes</h3>
+          <p>Discover delicious Indian raita recipes to complement your everyday meals.</p>
+          <div class="price">₹49</div>
+          <a class="btn" href="https://payhip.com/b/etgHK" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+        <article class="product-card" data-search="kids drawing sheets children art colouring">
+          <div class="product-icon">🎨</div>
+          <h3>Kids Drawing Sheets</h3>
+          <p>Creative drawing activities to encourage children's imagination and artistic skills.</p>
+          <div class="price">₹119</div>
+          <a class="btn" href="https://payhip.com/b/P8pZG" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+        <article class="product-card" data-search="bedtime stories little ones children lion turtle">
+          <div class="product-icon">🌙</div>
+          <h3>Bedtime Stories for Little Ones</h3>
+          <p>Enjoy engaging little stories for peaceful bedtime reading with young children.</p>
+          <div class="price">₹129</div>
+          <a class="btn" href="https://payhip.com/b/hN18q" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+        <article class="product-card" data-search="preschool tracing worksheets letters numbers handwriting learning">
+          <div class="product-icon">✏️</div>
+          <h3>Preschool Tracing Worksheets</h3>
+          <p>Printable tracing practice to help preschoolers build early writing skills.</p>
+          <div class="price">₹99</div>
+          <a class="btn" href="https://payhip.com/b/um6Ef" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+      </div>
+      <p class="no-results" id="noResults">No matching products found. Try another search.</p>
+    </div>
+  </section>
+
+  <section class="soft-section" id="why-us">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Why Choose Aarambh?</h2>
+        <p>Simple, practical resources made to support learning and creativity.</p>
+      </div>
+
+      <div class="benefit-grid">
+        <div class="benefit">
+          <div class="benefit-icon">📚</div>
+          <h3>Practical Resources</h3>
+          <p>Explore useful digital materials for everyday learning and family activities.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">🏡</div>
+          <h3>Learn at Home</h3>
+          <p>Use digital resources at your own pace and at a time that suits you.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">🌱</div>
+          <h3>Learn and Grow</h3>
+          <p>Discover resources that encourage creativity, practice and continuous learning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-heading">
+        <h2>How It Works</h2>
+        <p>Getting your digital product is simple.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div>
+            <h3>Choose a Product</h3>
+            <p>Browse our collection and select the ebook or worksheet you need.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <div>
+            <h3>Complete Your Purchase</h3>
+            <p>Tap Buy Now to visit the product checkout page on Payhip.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div>
+            <h3>Access Your Digital Download</h3>
+            <p>Follow the instructions on Payhip to receive your purchased digital product.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft-section" id="about">
+    <div class="container">
+      <div class="section-heading">
+        <h2>About Aarambh Digital Resources</h2>
+      </div>
+
+      <div class="about-box">
+        <p>
+          Aarambh Digital Resources is a digital resource brand focused on
+          practical ebooks, printable worksheets and learning materials for
+          families, children and everyday learners.
+        </p>
+        <p>
+          Our aim is to make useful digital resources accessible and convenient
+          so you can learn, practise and create at your own pace.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Frequently Asked Questions</h2>
+        <p>Some helpful information before you purchase.</p>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>What are digital products?</summary>
+          <p>Digital products are downloadable resources such as ebooks and printable worksheets that you can access electronically.</p>
+        </details>
+
+        <details>
+          <summary>How do I purchase a product?</summary>
+          <p>Choose a product, tap Buy Now and complete the purchase through its Payhip checkout page.</p>
+        </details>
+
+        <details>
+          <summary>How will I receive my purchase?</summary>
+          <p>Delivery instructions are provided through Payhip. Check the checkout and confirmation emails for your download link.</p>
+        </details>
+
+        <details>
+          <summary>Can I print the worksheets?</summary>
+          <p>Printing depends on the file format and the terms provided with the product. Check the individual product description before purchasing.</p>
+        </details>
+
+        <details>
+          <summary>Can I get a refund?</summary>
+          <p>Please read our refund policy and the applicable terms displayed on the product checkout page before purchasing.</p>
+        </details>
+
+        <details>
+          <summary>How can I contact you?</summary>
+          <p>You can email us at <a href="mailto:aarambhdigitalresources@gmail.com">aarambhdigitalresources@gmail.com</a>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft-section" id="policies">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Policies</h2>
+        <p>Please review our policies before placing an order.</p>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>Digital Product Policy</summary>
+          <p>Products are supplied digitally. No physical item will be shipped unless a product description specifically states otherwise. Please check the product details before purchasing.</p>
+        </details>
+
+        <details>
+          <summary>Refund and Cancellation Policy</summary>
+          <p>Because digital products may be delivered immediately, refunds and cancellations are subject to the applicable product terms and consumer protection laws. If you experience a payment or download issue, contact us for assistance.</p>
+        </details>
+
+        <details>
+          <summary>Privacy Policy</summary>
+          <p>When you contact us, we may receive the information you provide, such as your email address and message. Payments and checkout information are handled by the payment platform according to its privacy policy. We do not intend to collect unnecessary personal information through this website.</p>
+        </details>
+
+        <details>
+          <summary>Terms of Use</summary>
+          <p>Digital resources are intended for personal use unless a product description grants additional rights. Do not redistribute, resell or republish purchased files without permission from the rights holder.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Get in Touch</h2>
+        <p>Questions about our products? We would be happy to hear from you.</p>
+      </div>
+
+      <div class="contact-box">
+        <p><strong>Aarambh Digital Resources</strong></p>
+        <p>Email us for product questions or purchase assistance.</p>
+        <p>
+          <a href="mailto:aarambhdigitalresources@gmail.com">
+            aarambhdigitalresources@gmail.com
+          </a>
+        </p>
+        <a class="btn" href="mailto:aarambhdigitalresources@gmail.com">Email Us</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>Aarambh Digital Resources</strong></p>
+    <p>Learn • Create • Grow</p>
+
+    <div class="footer-links">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#policies">Policies</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <p>&copy; <span id="currentYear"></span> Aarambh Digital Resources. All rights reserved.</p>
+  </div>
+</footer>
+
+<a class="back-top" href="#top" aria-label="Back to top">↑</a>
+
+<script>
+const searchInput = document.getElementById("productSearch");
+const productCards = document.querySelectorAll(".product-card");
+const noResults = document.getElementById("noResults");
+
+searchInput.addEventListener("input", function () {
+  const searchTerm = this.value.toLowerCase().trim();
+  let visibleCount = 0;
+
+  productCards.forEach(function (card) {
+    const searchableText = (
+      card.innerText + " " + (card.dataset.search || "")
+    ).toLowerCase();
+
+    const matches = searchableText.includes(searchTerm);
+
+    card.style.display = matches ? "flex" : "none";
+
+    if (matches) {
+      visibleCount++;
+    }
+  });
+
+  noResults.style.display = visibleCount === 0 ? "block" : "none";
+});
+
+document.getElementById("currentYear").textContent =
+  new Date().getFullYear();
+</script>
+
 </body>
 </html>
+
+        <article class="product-card" data-search="raita recipes food cooking ebook indian recipes">
+          <div class="product-icon">🥗</div>
+          <h3>10 Delicious Raita Recipes</h3>
+          <p>Discover delicious Indian raita recipes to complement your everyday meals.</p>
+          <div class="price">₹49</div>
+          <a class="btn" href="https://payhip.com/b/etgHK" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+        <article class="product-card" data-search="kids drawing sheets children art colouring">
+          <div class="product-icon">🎨</div>
+          <h3>Kids Drawing Sheets</h3>
+          <p>Creative drawing activities to encourage children's imagination and artistic skills.</p>
+          <div class="price">₹119</div>
+          <a class="btn" href="https://payhip.com/b/P8pZG" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+        <article class="product-card" data-search="bedtime stories little ones children lion turtle">
+          <div class="product-icon">🌙</div>
+          <h3>Bedtime Stories for Little Ones</h3>
+          <p>Enjoy engaging little stories for peaceful bedtime reading with young children.</p>
+          <div class="price">₹129</div>
+          <a class="btn" href="https://payhip.com/b/hN18q" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+        <article class="product-card" data-search="preschool tracing worksheets letters numbers handwriting learning">
+          <div class="product-icon">✏️</div>
+          <h3>Preschool Tracing Worksheets</h3>
+          <p>Printable tracing practice to help preschoolers build early writing skills.</p>
+          <div class="price">₹99</div>
+          <a class="btn" href="https://payhip.com/b/um6Ef" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+      </div>
+      <p class="no-results" id="noResults">No matching products found. Try another search.</p>
+    </div>
+  </section>
+
+  <section class="soft-section" id="why-us">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Why Choose Aarambh?</h2>
+        <p>Simple, practical resources made to support learning and creativity.</p>
+      </div>
+
+      <div class="benefit-grid">
+        <div class="benefit">
+          <div class="benefit-icon">📚</div>
+          <h3>Practical Resources</h3>
+          <p>Explore useful digital materials for everyday learning and family activities.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">🏡</div>
+          <h3>Learn at Home</h3>
+          <p>Use digital resources at your own pace and at a time that suits you.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">🌱</div>
+          <h3>Learn and Grow</h3>
+          <p>Discover resources that encourage creativity, practice and continuous learning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-heading">
+        <h2>How It Works</h2>
+        <p>Getting your digital product is simple.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div>
+            <h3>Choose a Product</h3>
+            <p>Browse our collection and select the ebook or worksheet you need.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <div>
+            <h3>Complete Your Purchase</h3>
+            <p>Tap Buy Now to visit the product checkout page on Payhip.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div>
+            <h3>Access Your Digital Download</h3>
+            <p>Follow the instructions on Payhip to receive your purchased digital product.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft-section" id="about">
+    <div class="container">
+      <div class="section-heading">
+        <h2>About Aarambh Digital Resources</h2>
+      </div>
+
+      <div class="about-box">
+        <p>
+          Aarambh Digital Resources is a digital resource brand focused on
+          practical ebooks, printable worksheets and learning materials for
+          families, children and everyday learners.
+        </p>
+        <p>
+          Our aim is to make useful digital resources accessible and convenient
+          so you can learn, practise and create at your own pace.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Frequently Asked Questions</h2>
+        <p>Some helpful information before you purchase.</p>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>What are digital products?</summary>
+          <p>Digital products are downloadable resources such as ebooks and printable worksheets that you can access electronically.</p>
+        </details>
+
+        <details>
+          <summary>How do I purchase a product?</summary>
+          <p>Choose a product, tap Buy Now and complete the purchase through its Payhip checkout page.</p>
+        </details>
+
+        <details>
+          <summary>How will I receive my purchase?</summary>
+          <p>Delivery instructions are provided through Payhip. Check the checkout and confirmation emails for your download link.</p>
+        </details>
+
+        <details>
+          <summary>Can I print the worksheets?</summary>
+          <p>Printing depends on the file format and the terms provided with the product. Check the individual product description before purchasing.</p>
+        </details>
+
+        <details>
+          <summary>Can I get a refund?</summary>
+          <p>Please read our refund policy and the applicable terms displayed on the product checkout page before purchasing.</p>
+        </details>
+
+        <details>
+          <summary>How can I contact you?</summary>
+          <p>You can email us at <a href="mailto:aarambhdigitalresources@gmail.com">aarambhdigitalresources@gmail.com</a>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft-section" id="policies">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Policies</h2>
+        <p>Please review our policies before placing an order.</p>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>Digital Product Policy</summary>
+          <p>Products are supplied digitally. No physical item will be shipped unless a product description specifically states otherwise. Please check the product details before purchasing.</p>
+        </details>
+
+        <details>
+          <summary>Refund and Cancellation Policy</summary>
+          <p>Because digital products may be delivered immediately, refunds and cancellations are subject to the applicable product terms and consumer protection laws. If you experience a payment or download issue, contact us for assistance.</p>
+        </details>
+
+        <details>
+          <summary>Privacy Policy</summary>
+          <p>When you contact us, we may receive the information you provide, such as your email address and message. Payments and checkout information are handled by the payment platform according to its privacy policy. We do not intend to collect unnecessary personal information through this website.</p>
+        </details>
+
+        <details>
+          <summary>Terms of Use</summary>
+          <p>Digital resources are intended for personal use unless a product description grants additional rights. Do not redistribute, resell or republish purchased files without permission from the rights holder.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Get in Touch</h2>
+        <p>Questions about our products? We would be happy to hear from you.</p>
+      </div>
+
+      <div class="contact-box">
+        <p><strong>Aarambh Digital Resources</strong></p>
+        <p>Email us for product questions or purchase assistance.</p>
+        <p>
+          <a href="mailto:aarambhdigitalresources@gmail.com">
+            aarambhdigitalresources@gmail.com
+          </a>
+        </p>
+        <a class="btn" href="mailto:aarambhdigitalresources@gmail.com">Email Us</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>Aarambh Digital Resources</strong></p>
+    <p>Learn • Create • Grow</p>
+
+    <div class="footer-links">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#policies">Policies</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <p>&copy; <span id="currentYear"></span> Aarambh Digital Resources. All rights reserved.</p>
+  </div>
+</footer>
+
+<a class="back-top" href="#top" aria-label="Back to top">↑</a>
+
+<script>
+const searchInput = document.getElementById("productSearch");
+const productCards = document.querySelectorAll(".product-card");
+const noResults = document.getElementById("noResults");
+
+searchInput.addEventListener("input", function () {
+  const searchTerm = this.value.toLowerCase().trim();
+  let visibleCount = 0;
+
+  productCards.forEach(function (card) {
+    const searchableText = (
+      card.innerText + " " + (card.dataset.search || "")
+    ).toLowerCase();
+
+    const matches = searchableText.includes(searchTerm);
+
+    card.style.display = matches ? "flex" : "none";
+
+    if (matches) {
+      visibleCount++;
+    }
+  });
+
+  noResults.style.display = visibleCount === 0 ? "block" : "none";
+});
+
+document.getElementById("currentYear").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
+        
