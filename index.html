@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,23 +28,23 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 120px;
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
   background: var(--cream);
   color: var(--text);
   line-height: 1.7;
 }
 
-input, button, textarea, select {
-  font-family: "Times New Roman", Times, serif;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+button,
+input {
+  font: inherit;
 }
 
 .container {
@@ -54,6 +53,7 @@ a {
   margin: auto;
 }
 
+/* HEADER AND BRAND */
 header {
   background: var(--white);
   border-bottom: 1px solid var(--border);
@@ -92,7 +92,6 @@ header {
 
 .brand-name {
   color: var(--green);
-  font-family: "Times New Roman", Times, serif;
   font-size: 22px;
   font-weight: bold;
   line-height: 1.3;
@@ -102,7 +101,6 @@ header {
   display: block;
   margin-top: 5px;
   color: var(--muted);
-  font-family: "Times New Roman", Times, serif;
   font-size: 11px;
   letter-spacing: 1px;
   line-height: 1.5;
@@ -116,7 +114,6 @@ nav {
 }
 
 nav a {
-  font-family: "Times New Roman", Times, serif;
   font-size: 14px;
   font-weight: bold;
 }
@@ -125,6 +122,44 @@ nav a:hover {
   color: var(--green);
 }
 
+/* BUTTONS */
+.button,
+.btn {
+  display: inline-block;
+  padding: 11px 18px;
+  border-radius: 6px;
+  background: var(--green);
+  color: white;
+  border: 1px solid var(--green);
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.button:hover,
+.btn:hover {
+  background: var(--dark);
+}
+
+.button:disabled,
+.btn:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--green);
+}
+
+.button-outline:hover {
+  background: var(--green);
+  color: white;
+}
+
+/* HERO */
 .hero {
   padding: 65px 0;
   background: linear-gradient(135deg, var(--cream), var(--light));
@@ -134,8 +169,7 @@ nav a:hover {
 .eyebrow {
   display: inline-block;
   color: var(--green);
-  font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -143,20 +177,13 @@ nav a:hover {
   line-height: 1.4;
 }
 
-h1, h2, h3, h4, h5, h6,
-.product-card h3 {
-  font-family: "Times New Roman", Times, serif;
-  color: var(--dark);
-}
-
 h1 {
   color: var(--green);
-  max-width: 100%;
+  max-width: 850px;
   margin: 12px auto 15px;
-  font-size: 27px;
+  font-size: 34px;
   line-height: 1.4;
   font-weight: bold;
-  letter-spacing: 1px;
 }
 
 .hero p {
@@ -164,32 +191,6 @@ h1 {
   margin: 0 auto 25px;
   color: var(--muted);
   font-size: 17px;
-}
-
-.button {
-  display: inline-block;
-  padding: 11px 21px;
-  border-radius: 6px;
-  background: var(--green);
-  color: white;
-  border: 1px solid var(--green);
-  font-family: "Times New Roman", Times, serif;
-  font-weight: bold;
-  font-size: 15px;
-  text-align: center;
-}
-
-.button:hover {
-  background: var(--dark);
-}
-
-.button-outline {
-  background: transparent;
-  color: var(--green);
-}
-
-.button-outline:hover {
-  color: white;
 }
 
 .hero .button {
@@ -205,6 +206,7 @@ h1 {
   font-weight: bold;
 }
 
+/* SECTIONS */
 section {
   padding: 60px 0;
 }
@@ -216,8 +218,8 @@ section {
 }
 
 .section-heading h2 {
-  font-family: "Times New Roman", Times, serif;
   font-size: 32px;
+  color: var(--dark);
   margin-bottom: 10px;
 }
 
@@ -226,6 +228,11 @@ section {
   font-size: 17px;
 }
 
+.soft-section {
+  background: white;
+}
+
+/* SEARCH */
 .search-box {
   max-width: 520px;
   margin: 0 auto 30px;
@@ -240,6 +247,7 @@ section {
   background: white;
 }
 
+/* PRODUCT CARDS */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -253,6 +261,7 @@ section {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .product-art {
@@ -277,6 +286,7 @@ section {
 }
 
 .product-card h3 {
+  color: var(--dark);
   font-size: 21px;
   line-height: 1.4;
   margin-bottom: 10px;
@@ -291,20 +301,36 @@ section {
 .product-bottom {
   margin-top: auto;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .price {
-  font-size: 21px;
+  font-size: 22px;
   font-weight: bold;
   color: var(--green);
 }
 
-.product-bottom .button {
-  padding: 9px 12px;
-  font-size: 15px;
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.product-actions .button,
+.product-actions .btn {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+}
+
+.cart-status {
+  margin-top: 12px;
+  color: var(--green);
+  font-size: 14px;
+  font-weight: bold;
+  min-height: 1.5em;
 }
 
 .no-results {
@@ -313,11 +339,9 @@ section {
   padding: 25px;
 }
 
-.soft-section {
-  background: white;
-}
-
-.features-grid, .steps-grid {
+/* FEATURES */
+.features-grid,
+.steps-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
@@ -334,13 +358,15 @@ section {
   font-size: 28px;
 }
 
-.feature h3, .step h3 {
+.feature h3,
+.step h3 {
   color: var(--dark);
   margin: 8px 0;
   font-size: 21px;
 }
 
-.feature p, .step p {
+.feature p,
+.step p {
   font-size: 17px;
   color: var(--muted);
 }
@@ -363,14 +389,17 @@ section {
   font-size: 20px;
 }
 
+/* ABOUT, FAQ AND CONTACT */
 .about-box {
   max-width: 800px;
   margin: auto;
   text-align: center;
 }
 
-.about-box h2 {
+.about-box h2,
+.contact-box h2 {
   font-size: 32px;
+  color: var(--dark);
   margin-bottom: 15px;
 }
 
@@ -416,10 +445,6 @@ section {
   border-radius: 10px;
 }
 
-.contact-box h2 {
-  font-size: 32px;
-}
-
 .contact-box p {
   color: var(--muted);
   margin: 12px 0;
@@ -433,6 +458,7 @@ section {
   font-size: 17px;
 }
 
+/* POLICIES */
 .policies {
   background: #f0f0e6;
   padding: 35px 0;
@@ -441,6 +467,7 @@ section {
 
 .policies h2 {
   font-size: 28px;
+  color: var(--dark);
 }
 
 .policy-links {
@@ -457,6 +484,27 @@ section {
   font-size: 16px;
 }
 
+.policy-content {
+  max-width: 850px;
+  margin: 25px auto 0;
+  text-align: left;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.policy-content h3 {
+  margin: 12px 0 5px;
+  color: var(--dark);
+}
+
+.policy-content p {
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+/* FOOTER */
 footer {
   background: var(--dark);
   color: white;
@@ -480,8 +528,10 @@ footer p {
   background: var(--green);
   color: white;
   font-size: 22px;
+  z-index: 90;
 }
 
+/* MOBILE RESPONSIVE */
 @media (max-width: 950px) {
   .header-inner {
     flex-wrap: wrap;
@@ -536,15 +586,13 @@ footer p {
   }
 
   .eyebrow {
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
   }
 
   h1 {
-    font-size: 23px;
-    letter-spacing: 0.5px;
+    font-size: 25px;
     line-height: 1.4;
-    white-space: normal;
   }
 
   .hero p {
@@ -575,19 +623,6 @@ footer p {
     font-size: 15px;
   }
 
-  .product-bottom {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .product-bottom .button {
-    width: 100%;
-  }
-
-  .price {
-    font-size: 19px;
-  }
-
   .product-art {
     min-height: 110px;
   }
@@ -596,7 +631,8 @@ footer p {
     font-size: 38px;
   }
 
-  .features-grid, .steps-grid {
+  .features-grid,
+  .steps-grid {
     grid-template-columns: 1fr;
   }
 
@@ -604,16 +640,14 @@ footer p {
   .contact-box h2 {
     font-size: 27px;
   }
-
-  .feature p, .step p,
-  .about-box p, .contact-box p {
-    font-size: 16px;
-  }
 }
 </style>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 
 <body>
+
 <header>
   <div class="container header-inner">
     <a class="brand" href="#home" aria-label="Aarambh Digital Resources home">
@@ -642,20 +676,14 @@ footer p {
   <div class="container">
     <span class="eyebrow">WELCOME TO AARAMBH</span>
     <h1>Little Resources. Big Possibilities.</h1>
-    <p>
-      Discover thoughtfully created digital resources for learning,
-      creativity, everyday inspiration and family fun. Simple, useful
-      and ready to use.
-    </p>
+    <p>Discover thoughtfully created digital resources for learning, creativity, everyday inspiration and family fun. Simple, useful and ready to use.</p>
     <a class="button" href="#products">Explore Our Products</a>
     <a class="button button-outline" href="#about">Discover Our Story</a>
   </div>
 </section>
 
 <div class="trust">
-  <div class="container">
-    Digital Learning &nbsp; • &nbsp; Creative Resources &nbsp; • &nbsp; Everyday Inspiration
-  </div>
+  <div class="container">Digital Learning • Creative Resources • Everyday Inspiration</div>
 </div>
 
 <section id="products">
@@ -674,43 +702,55 @@ footer p {
 
     <div class="products-grid" id="productsGrid">
 
-      <article class="product-card" data-search="raita recipe ebook cooking food indian">
+      <article class="product-card"
+        data-search="raita recipe ebook cooking food indian">
         <div class="product-art"><span>🥣</span></div>
         <div class="product-body">
           <h3>10 Delicious Raita Recipes</h3>
           <p>Explore ten refreshing homemade raita recipes: Boondi, cucumber, lauki, vegetable, onion, tadka, beetroot, palak, coriander and mint raita.</p>
           <div class="product-bottom">
             <span class="price">₹49</span>
-            <button type="button" class="btn" onclick="buyRaita()">Buy Now</button>
+            <div class="product-actions">
+              <button type="button" class="btn" onclick="addRaitaToCart()">
+                Add to Cart
+              </button>
+              <button type="button" class="btn" onclick="buyRaita(event)">
+                Buy Now
+              </button>
+            </div>
           </div>
+          <p class="cart-status" id="cartStatus" aria-live="polite"></p>
         </div>
       </article>
 
-      <article class="product-card" data-search="kids drawing sheets children art printable">
+      <article class="product-card"
+        data-search="kids drawing sheets children art printable">
         <div class="product-art"><span>🎨</span></div>
         <div class="product-body">
           <h3>Kids Drawing Sheets</h3>
           <p>Printable drawing activities designed to encourage children's imagination, creativity and early art skills.</p>
           <div class="product-bottom">
             <span class="price">₹49</span>
-            <a class="button" href="YOUR_DRAWING_PAYMENT_LINK_HERE">Get Sheets</a>
+            <a class="button" href="https://imjo.in/qT8Z6J">Get Sheets</a>
           </div>
         </div>
       </article>
 
-      <article class="product-card" data-search="preschool drawing worksheets learning certificate kids">
+      <article class="product-card"
+        data-search="preschool drawing worksheets learning certificate kids">
         <div class="product-art"><span>✏️</span></div>
         <div class="product-body">
           <h3>Preschool Drawing Worksheets</h3>
           <p>Fun printable drawing worksheets for little learners, with a completion certificate to celebrate their effort.</p>
           <div class="product-bottom">
             <span class="price">₹49</span>
-            <a class="button" href="YOUR_PRESCHOOL_PAYMENT_LINK_HERE">Get Worksheets</a>
+            <a class="button" href="https://imjo.in/9fZq4g">Get Worksheets</a>
           </div>
         </div>
       </article>
 
-      <article class="product-card" data-search="digital resources printable learning ebooks">
+      <article class="product-card"
+        data-search="digital resources printable learning ebooks">
         <div class="product-art"><span>📚</span></div>
         <div class="product-body">
           <h3>More Digital Resources</h3>
@@ -723,7 +763,6 @@ footer p {
       </article>
 
     </div>
-
     <p class="no-results" id="noResults">No matching products found. Try another search.</p>
   </div>
 </section>
@@ -736,20 +775,17 @@ footer p {
       <h2>Resources Made With Purpose</h2>
       <p>We aim to make everyday learning and creativity simpler and more accessible.</p>
     </div>
-
     <div class="features-grid">
       <div class="feature">
         <div class="symbol">📥</div>
         <h3>Digital Convenience</h3>
         <p>Access digital resources without waiting for physical delivery.</p>
       </div>
-
       <div class="feature">
         <div class="symbol">🌱</div>
         <h3>Learn and Grow</h3>
         <p>Discover practical resources for children, families and everyday life.</p>
       </div>
-
       <div class="feature">
         <div class="symbol">🧠</div>
         <h3>Thoughtfully Created</h3>
@@ -766,20 +802,17 @@ footer p {
       <h2>How It Works</h2>
       <p>Your digital product journey in three simple steps.</p>
     </div>
-
     <div class="steps-grid">
       <div class="step">
         <div class="step-number">1</div>
         <h3>Choose a Product</h3>
         <p>Browse the collection and select the resource you need.</p>
       </div>
-
       <div class="step">
         <div class="step-number">2</div>
         <h3>Complete Payment</h3>
-        <p>Use the payment link provided for your selected product.</p>
+        <p>Use the payment link or secure checkout provided for your selected product.</p>
       </div>
-
       <div class="step">
         <div class="step-number">3</div>
         <h3>Receive Your Download</h3>
@@ -794,19 +827,8 @@ footer p {
     <div class="about-box">
       <span class="eyebrow">OUR STORY</span>
       <h2>About Aarambh Digital Resources</h2>
-
-      <p>
-        Aarambh Digital Resources is a growing digital-products
-        initiative focused on useful ebooks, printable worksheets,
-        creative learning materials and everyday resources.
-      </p>
-
-      <p>
-        Our goal is to make digital resources easy to discover and
-        convenient to use, whether you are learning something new,
-        helping children develop creative skills or looking for
-        practical ideas for everyday life.
-      </p>
+      <p>Aarambh Digital Resources is a growing digital-products initiative focused on useful ebooks, printable worksheets, creative learning materials and everyday resources.</p>
+      <p>Our goal is to make digital resources easy to discover and convenient to use, whether you are learning something new, helping children develop creative skills or looking for practical ideas for everyday life.</p>
     </div>
   </div>
 </section>
@@ -817,31 +839,26 @@ footer p {
       <span class="eyebrow">NEED HELP?</span>
       <h2>Frequently Asked Questions</h2>
     </div>
-
     <div class="faq-list">
       <details>
         <summary>What products do you offer?</summary>
         <p>We offer digital resources such as recipe ebooks, kids' drawing sheets and preschool worksheets.</p>
       </details>
-
       <details>
         <summary>Are these physical products?</summary>
-        <p>The products listed here are intended as digital resources. Please check each product description before purchasing.</p>
+        <p>The products listed here are digital resources. Please check each product description before purchasing.</p>
       </details>
-
       <details>
         <summary>How will I receive my purchased PDF?</summary>
         <p>Delivery depends on the payment and delivery system configured for the product. Please check the purchase instructions or contact us for assistance.</p>
       </details>
-
       <details>
         <summary>What should I do if I have a payment problem?</summary>
         <p>Email us with your order details and a description of the issue. Never email your card PIN or payment password.</p>
       </details>
-
       <details>
         <summary>Can I request a refund?</summary>
-        <p>Please review our Refund Policy before purchasing. Refund eligibility is governed by the published policy and applicable consumer-protection laws.</p>
+        <p>Please review our Refund Policy below before purchasing. Refund eligibility is governed by the published policy and applicable consumer-protection laws.</p>
       </details>
     </div>
   </div>
@@ -852,15 +869,9 @@ footer p {
     <div class="contact-box">
       <span class="eyebrow">WE ARE HERE TO HELP</span>
       <h2>Contact Us</h2>
-
       <p>Have a question about a product, order or digital download? Get in touch by email.</p>
-
-      <a class="email-link" href="mailto:aarambhdigitalresources@gmail.com">
-        aarambhdigitalresources@gmail.com
-      </a>
-
+      <a class="email-link" href="mailto:aarambhdigitalresources@gmail.com">aarambhdigitalresources@gmail.com</a>
       <p>We will respond as soon as we can.</p>
-
       <a class="button" href="mailto:aarambhdigitalresources@gmail.com">Email Us</a>
     </div>
   </div>
@@ -870,27 +881,30 @@ footer p {
   <div class="container">
     <h2>Our Policies</h2>
     <p>Please review our policies before placing an order.</p>
-
     <div class="policy-links">
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
-      <a href="refund-policy.html">Refund Policy</a>
-      <a href="shipping-policy.html">Shipping &amp; Delivery Policy</a>
+      <a href="#privacy-policy">Privacy Policy</a>
+      <a href="#terms">Terms &amp; Conditions</a>
+      <a href="#refund-policy">Refund Policy</a>
+      <a href="#delivery-policy">Shipping &amp; Delivery Policy</a>
       <a href="#contact">Contact Us</a>
     </div>
-  </div>
-</section>
 
-<footer>
-  <div class="container">
-    <p>&copy; <span id="currentYear">2026</span> Aarambh Digital Resources. All rights reserved.</p>
-    <p>Learn • Create • Grow</p>
-  </div>
-</footer>
+    <div class="policy-content" id="privacy-policy">
+      <h3>Privacy Policy</h3>
+      <p>We use information you voluntarily send to our contact email only to respond to your questions and help with orders. Do not send payment passwords, card PINs or full card details by email. Payment information is handled by the payment provider. Contact us if you have a privacy question.</p>
+    </div>
 
-<a class="back-top" href="#home" aria-label="Back to top">↑</a>
+    <div class="policy-content" id="terms">
+      <h3>Terms &amp; Conditions</h3>
+      <p>Products listed on this website are digital resources. Product descriptions and prices are shown on the relevant product card. Please review the description before purchasing. You are responsible for providing accurate information during checkout. Contact us if you need help with an order.</p>
+    </div>
 
+    <div class="policy-content" id="refund-policy">
+      <h3>Refund Policy</h3>
+      <p>Please check the product description before purchasing. If you experience a duplicate charge, failed transaction, or cannot access a purchased product, email aarambhdigitalresources@gmail.com with the order reference and a description of the problem. Requests will be reviewed in accordance with ap
+        
 <script>
+/* PRODUCT SEARCH */
 const searchInput = document.getElementById("productSearch");
 const productCards = document.querySelectorAll(".product-card");
 const noResults = document.getElementById("noResults");
@@ -904,18 +918,313 @@ searchInput.addEventListener("input", function () {
       (card.innerText + " " + card.dataset.search).toLowerCase();
 
     const matches = searchableText.includes(query);
-
     card.style.display = matches ? "flex" : "none";
 
-    if (matches) visibleCount++;
+    if (matches) {
+      visibleCount++;
+    }
   });
 
   noResults.style.display = visibleCount === 0 ? "block" : "none";
 });
 
+/* AUTOMATIC COPYRIGHT YEAR */
 document.getElementById("currentYear").textContent =
   new Date().getFullYear();
+
+/* RAITA EBOOK CART COUNTER
+   This is a simple page-only cart, not a saved shopping cart. */
+let raitaCartCount = 0;
+
+function addRaitaToCart() {
+  raitaCartCount++;
+
+  const status = document.getElementById("cartStatus");
+
+  status.textContent =
+    "Added to cart • Raita Recipes • ₹49 • Quantity: " +
+    raitaCartCount;
+}
+
+/* RAITA EBOOK RAZORPAY CHECKOUT
+   Uses the existing Cloudflare Worker endpoint.
+   The Worker must be configured correctly for this to work. */
+async function buyRaita(event) {
+  const button = event ? event.currentTarget : null;
+
+  if (button) {
+    button.disabled = true;
+    button.textContent = "Opening checkout...";
+  }
+
+  try {
+    const response = await fetch(
+      "https://winter-king-277b.amritasinghbhati140292.workers.dev/create-order",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          amount: 4900
+        })
+      }
+    );
+
+    let order = {};
+
+    try {
+      order = await response.json();
+    } catch (error) {
+      throw new Error(
+        "The payment service returned an invalid response."
+      );
+    }
+
+    if (!response.ok) {
+      throw new Error(
+        order.error ||
+        order.message ||
+        "The payment order could not be created."
+      );
+    }
+
+    if (
+      !order.key_id ||
+      !order.order_id ||
+      !order.amount ||
+      !order.currency
+    ) {
+      throw new Error(
+        "Payment setup needs checking. The service did not return all required order details."
+      );
+    }
+
+    if (typeof Razorpay === "undefined") {
+      throw new Error(
+        "Razorpay could not load. Check your internet connection and try again."
+      );
+    }
+
+    const options = {
+      key: order.key_id,
+      amount: order.amount,
+      currency: order.currency,
+      order_id: order.order_id,
+
+      name: "Aarambh Digital Resources",
+      description: "10 Delicious Raita Recipes",
+
+      theme: {
+        color: "#285c46"
+      },
+
+      handler: function (paymentResponse) {
+        alert(
+          "Payment response received.\n\nPayment ID: " +
+          (paymentResponse.razorpay_payment_id || "Not provided") +
+          "\n\nPlease keep this ID for your records. This message does not itself confirm server-side payment verification or PDF delivery."
+        );
+
+        console.log(
+          "Razorpay payment response:",
+          paymentResponse
+        );
+      },
+
+      modal: {
+        ondismiss: function () {
+          if (button) {
+            button.disabled = false;
+            button.textContent = "Buy Now";
+          }
+        }
+      }
+    };
+
+    const checkout = new Razorpay(options);
+
+    checkout.on("payment.failed", function (failure) {
+      alert(
+        "Payment failed: " +
+        (
+          failure.error &&
+          failure.error.description
+            ? failure.error.description
+            : "Please try again."
+        )
+      );
+      
+<script>
+/* PRODUCT SEARCH */
+const searchInput = document.getElementById("productSearch");
+const productCards = document.querySelectorAll(".product-card");
+const noResults = document.getElementById("noResults");
+
+searchInput.addEventListener("input", function () {
+  const query = this.value.toLowerCase().trim();
+  let visibleCount = 0;
+
+  productCards.forEach(function (card) {
+    const searchableText =
+      (card.innerText + " " + card.dataset.search).toLowerCase();
+
+    const matches = searchableText.includes(query);
+    card.style.display = matches ? "flex" : "none";
+
+    if (matches) {
+      visibleCount++;
+    }
+  });
+
+  noResults.style.display = visibleCount === 0 ? "block" : "none";
+});
+
+/* AUTOMATIC COPYRIGHT YEAR */
+document.getElementById("currentYear").textContent =
+  new Date().getFullYear();
+
+/* RAITA EBOOK CART COUNTER
+   This is a simple page-only cart, not a saved shopping cart. */
+let raitaCartCount = 0;
+
+function addRaitaToCart() {
+  raitaCartCount++;
+
+  const status = document.getElementById("cartStatus");
+
+  status.textContent =
+    "Added to cart • Raita Recipes • ₹49 • Quantity: " +
+    raitaCartCount;
+}
+
+/* RAITA EBOOK RAZORPAY CHECKOUT
+   Uses the existing Cloudflare Worker endpoint.
+   The Worker must be configured correctly for this to work. */
+async function buyRaita(event) {
+  const button = event ? event.currentTarget : null;
+
+  if (button) {
+    button.disabled = true;
+    button.textContent = "Opening checkout...";
+  }
+
+  try {
+    const response = await fetch(
+      "https://winter-king-277b.amritasinghbhati140292.workers.dev/create-order",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          amount: 4900
+        })
+      }
+    );
+
+    let order = {};
+
+    try {
+      order = await response.json();
+    } catch (error) {
+      throw new Error(
+        "The payment service returned an invalid response."
+      );
+    }
+
+    if (!response.ok) {
+      throw new Error(
+        order.error ||
+        order.message ||
+        "The payment order could not be created."
+      );
+    }
+
+    if (
+      !order.key_id ||
+      !order.order_id ||
+      !order.amount ||
+      !order.currency
+    ) {
+      throw new Error(
+        "Payment setup needs checking. The service did not return all required order details."
+      );
+    }
+
+    if (typeof Razorpay === "undefined") {
+      throw new Error(
+        "Razorpay could not load. Check your internet connection and try again."
+      );
+    }
+
+    const options = {
+      key: order.key_id,
+      amount: order.amount,
+      currency: order.currency,
+      order_id: order.order_id,
+
+      name: "Aarambh Digital Resources",
+      description: "10 Delicious Raita Recipes",
+
+      theme: {
+        color: "#285c46"
+      },
+
+      handler: function (paymentResponse) {
+        alert(
+          "Payment response received.\n\nPayment ID: " +
+          (paymentResponse.razorpay_payment_id || "Not provided") +
+          "\n\nPlease keep this ID for your records. This message does not itself confirm server-side payment verification or PDF delivery."
+        );
+
+        console.log(
+          "Razorpay payment response:",
+          paymentResponse
+        );
+      },
+
+      modal: {
+        ondismiss: function () {
+          if (button) {
+            button.disabled = false;
+            button.textContent = "Buy Now";
+          }
+        }
+      }
+    };
+
+    const checkout = new Razorpay(options);
+
+    checkout.on("payment.failed", function (failure) {
+      alert(
+        "Payment failed: " +
+        (
+          failure.error &&
+          failure.error.description
+            ? failure.error.description
+            : "Please try again."
+        )
+      );
+    });
+
+    checkout.open();
+
+  } catch (error) {
+    alert(
+      "Unable to open payment.\n\n" +
+      error.message +
+      "\n\nPlease contact aarambhdigitalresources@gmail.com if the problem continues."
+    );
+
+  } finally {
+    if (button) {
+      button.disabled = false;
+      button.textContent = "Buy Now";
+    }
+  }
+}
 </script>
 
 </body>
-  </html>
+</html>
