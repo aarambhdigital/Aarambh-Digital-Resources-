@@ -20,7 +20,12 @@
   --border: #e1e7dc;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
 
 html {
   scroll-behavior: smooth;
@@ -28,13 +33,20 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   background: var(--cream);
   color: var(--text);
   line-height: 1.7;
 }
 
-a { text-decoration: none; color: inherit; }
+input, button, textarea, select {
+  font-family: "Times New Roman", Times, serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .container {
   width: 92%;
@@ -80,13 +92,17 @@ header {
 
 .brand-name {
   color: var(--green);
-  font: bold 22px/1.3 Georgia, serif;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.3;
 }
 
 .tagline {
   display: block;
   margin-top: 5px;
   color: var(--muted);
+  font-family: "Times New Roman", Times, serif;
   font-size: 11px;
   letter-spacing: 1px;
   line-height: 1.5;
@@ -100,11 +116,14 @@ nav {
 }
 
 nav a {
-  font-size: 13px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
   font-weight: bold;
 }
 
-nav a:hover { color: var(--green); }
+nav a:hover {
+  color: var(--green);
+}
 
 .hero {
   padding: 65px 0;
@@ -112,11 +131,10 @@ nav a:hover { color: var(--green); }
   text-align: center;
 }
 
-/* Welcome heading */
 .eyebrow {
   display: inline-block;
   color: var(--green);
-  font-family: Arial, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -125,29 +143,27 @@ nav a:hover { color: var(--green); }
   line-height: 1.4;
 }
 
-/* Other section headings */
-h1, h2, .product-card h3 {
-  font-family: Georgia, "Times New Roman", serif;
+h1, h2, h3, h4, h5, h6,
+.product-card h3 {
+  font-family: "Times New Roman", Times, serif;
   color: var(--dark);
 }
 
-/* Tagline now matches the welcome heading's font style */
 h1 {
-  font-family: Arial, sans-serif;
   color: var(--green);
   max-width: 100%;
   margin: 12px auto 15px;
-  font-size: 20px;
+  font-size: 27px;
   line-height: 1.4;
   font-weight: bold;
-  letter-spacing: 2px;
-  white-space: nowrap;
+  letter-spacing: 1px;
 }
 
 .hero p {
   max-width: 650px;
   margin: 0 auto 25px;
   color: var(--muted);
+  font-size: 17px;
 }
 
 .button {
@@ -157,30 +173,41 @@ h1 {
   background: var(--green);
   color: white;
   border: 1px solid var(--green);
+  font-family: "Times New Roman", Times, serif;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 15px;
   text-align: center;
 }
 
-.button:hover { background: var(--dark); }
+.button:hover {
+  background: var(--dark);
+}
 
 .button-outline {
   background: transparent;
   color: var(--green);
 }
 
-.hero .button { margin: 5px; }
+.button-outline:hover {
+  color: white;
+}
+
+.hero .button {
+  margin: 5px;
+}
 
 .trust {
   padding: 19px 0;
   background: white;
   text-align: center;
   color: var(--green);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: bold;
 }
 
-section { padding: 60px 0; }
+section {
+  padding: 60px 0;
+}
 
 .section-heading {
   max-width: 700px;
@@ -189,13 +216,14 @@ section { padding: 60px 0; }
 }
 
 .section-heading h2 {
+  font-family: "Times New Roman", Times, serif;
   font-size: 32px;
   margin-bottom: 10px;
 }
 
 .section-heading p {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .search-box {
@@ -208,7 +236,7 @@ section { padding: 60px 0; }
   padding: 14px;
   border: 1px solid #cbd7ca;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 17px;
   background: white;
 }
 
@@ -237,7 +265,9 @@ section { padding: 60px 0; }
   text-align: center;
 }
 
-.product-art span { font-size: 48px; }
+.product-art span {
+  font-size: 48px;
+}
 
 .product-body {
   padding: 20px 17px;
@@ -247,13 +277,13 @@ section { padding: 60px 0; }
 }
 
 .product-card h3 {
-  font-size: 19px;
+  font-size: 21px;
   line-height: 1.4;
   margin-bottom: 10px;
 }
 
 .product-card p {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
   margin-bottom: 18px;
 }
@@ -267,14 +297,14 @@ section { padding: 60px 0; }
 }
 
 .price {
-  font-size: 19px;
+  font-size: 21px;
   font-weight: bold;
   color: var(--green);
 }
 
 .product-bottom .button {
   padding: 9px 12px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .no-results {
@@ -283,7 +313,9 @@ section { padding: 60px 0; }
   padding: 25px;
 }
 
-.soft-section { background: white; }
+.soft-section {
+  background: white;
+}
 
 .features-grid, .steps-grid {
   display: grid;
@@ -298,15 +330,18 @@ section { padding: 60px 0; }
   border-radius: 10px;
 }
 
-.feature .symbol { font-size: 28px; }
+.feature .symbol {
+  font-size: 28px;
+}
 
 .feature h3, .step h3 {
   color: var(--dark);
   margin: 8px 0;
+  font-size: 21px;
 }
 
 .feature p, .step p {
-  font-size: 14px;
+  font-size: 17px;
   color: var(--muted);
 }
 
@@ -325,6 +360,7 @@ section { padding: 60px 0; }
   color: white;
   border-radius: 50%;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .about-box {
@@ -333,9 +369,15 @@ section { padding: 60px 0; }
   text-align: center;
 }
 
+.about-box h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
 .about-box p {
   color: var(--muted);
   margin-bottom: 14px;
+  font-size: 17px;
 }
 
 .faq-list {
@@ -355,11 +397,12 @@ section { padding: 60px 0; }
   cursor: pointer;
   color: var(--dark);
   font-weight: bold;
+  font-size: 18px;
 }
 
 .faq-list details p {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 17px;
   color: var(--muted);
 }
 
@@ -373,21 +416,31 @@ section { padding: 60px 0; }
   border-radius: 10px;
 }
 
+.contact-box h2 {
+  font-size: 32px;
+}
+
 .contact-box p {
   color: var(--muted);
   margin: 12px 0;
+  font-size: 17px;
 }
 
 .email-link {
   color: var(--green);
   font-weight: bold;
   overflow-wrap: anywhere;
+  font-size: 17px;
 }
 
 .policies {
   background: #f0f0e6;
   padding: 35px 0;
   text-align: center;
+}
+
+.policies h2 {
+  font-size: 28px;
 }
 
 .policy-links {
@@ -401,7 +454,7 @@ section { padding: 60px 0; }
 .policy-links a {
   color: var(--green);
   text-decoration: underline;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 footer {
@@ -411,7 +464,9 @@ footer {
   padding: 25px 0;
 }
 
-footer p { font-size: 13px; }
+footer p {
+  font-size: 16px;
+}
 
 .back-top {
   position: fixed;
@@ -428,7 +483,9 @@ footer p { font-size: 13px; }
 }
 
 @media (max-width: 950px) {
-  .header-inner { flex-wrap: wrap; }
+  .header-inner {
+    flex-wrap: wrap;
+  }
 
   nav {
     justify-content: center;
@@ -442,11 +499,14 @@ footer p { font-size: 13px; }
 }
 
 @media (max-width: 560px) {
-  .header-inner { justify-content: center; }
+  .header-inner {
+    justify-content: center;
+  }
 
   .brand {
     width: 100%;
     justify-content: center;
+    gap: 10px;
   }
 
   .brand-logo {
@@ -454,13 +514,26 @@ footer p { font-size: 13px; }
     height: 55px;
   }
 
-  .brand-name { font-size: 19px; }
+  .brand-name {
+    font-size: 19px;
+  }
 
-  nav { gap: 9px 14px; }
+  .tagline {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
 
-  nav a { font-size: 12px; }
+  nav {
+    gap: 9px 14px;
+  }
 
-  .hero { padding: 48px 0; }
+  nav a {
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 48px 0;
+  }
 
   .eyebrow {
     font-size: 18px;
@@ -468,40 +541,73 @@ footer p { font-size: 13px; }
   }
 
   h1 {
-    font-family: Arial, sans-serif;
-    color: var(--green);
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-size: 23px;
+    letter-spacing: 0.5px;
     line-height: 1.4;
     white-space: normal;
   }
 
-  .section-heading h2 { font-size: 28px; }
+  .hero p {
+    font-size: 16px;
+  }
 
-  .products-grid { gap: 12px; }
+  .section-heading h2 {
+    font-size: 28px;
+  }
 
-  .product-body { padding: 14px 11px; }
+  .section-heading p {
+    font-size: 16px;
+  }
 
-  .product-card h3 { font-size: 16px; }
+  .products-grid {
+    gap: 12px;
+  }
 
-  .product-card p { font-size: 12px; }
+  .product-body {
+    padding: 14px 11px;
+  }
+
+  .product-card h3 {
+    font-size: 18px;
+  }
+
+  .product-card p {
+    font-size: 15px;
+  }
 
   .product-bottom {
     align-items: flex-start;
     flex-direction: column;
   }
 
-  .product-bottom .button { width: 100%; }
+  .product-bottom .button {
+    width: 100%;
+  }
 
-  .price { font-size: 18px; }
+  .price {
+    font-size: 19px;
+  }
 
-  .product-art { min-height: 110px; }
+  .product-art {
+    min-height: 110px;
+  }
 
-  .product-art span { font-size: 38px; }
+  .product-art span {
+    font-size: 38px;
+  }
 
   .features-grid, .steps-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-box h2,
+  .contact-box h2 {
+    font-size: 27px;
+  }
+
+  .feature p, .step p,
+  .about-box p, .contact-box p {
+    font-size: 16px;
   }
 }
 </style>
@@ -621,8 +727,8 @@ footer p { font-size: 13px; }
     <p class="no-results" id="noResults">No matching products found. Try another search.</p>
   </div>
 </section>
-    </main>
-    
+</main>
+
 <section class="soft-section" id="why-us">
   <div class="container">
     <div class="section-heading">
@@ -812,4 +918,4 @@ document.getElementById("currentYear").textContent =
 </script>
 
 </body>
-</html>
+  </html>
