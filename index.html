@@ -21,7 +21,11 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -31,7 +35,12 @@ body {
 }
 
 a { text-decoration: none; color: inherit; }
-.container { width: 92%; max-width: 1120px; margin: auto; }
+
+.container {
+  width: 92%;
+  max-width: 1120px;
+  margin: auto;
+}
 
 header {
   background: var(--white);
@@ -50,7 +59,12 @@ header {
   padding: 12px 0;
 }
 
-.brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
 
 .brand-logo {
   width: 65px;
@@ -59,7 +73,10 @@ header {
   flex-shrink: 0;
 }
 
-.brand-copy { display: flex; flex-direction: column; }
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+}
 
 .brand-name {
   color: var(--green);
@@ -75,8 +92,18 @@ header {
   line-height: 1.5;
 }
 
-nav { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
-nav a { font-size: 13px; font-weight: bold; }
+nav {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-size: 13px;
+  font-weight: bold;
+}
+
 nav a:hover { color: var(--green); }
 
 .hero {
@@ -85,9 +112,11 @@ nav a:hover { color: var(--green); }
   text-align: center;
 }
 
+/* Welcome heading */
 .eyebrow {
   display: inline-block;
   color: var(--green);
+  font-family: Arial, sans-serif;
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -96,19 +125,22 @@ nav a:hover { color: var(--green); }
   line-height: 1.4;
 }
 
+/* Other section headings */
 h1, h2, .product-card h3 {
   font-family: Georgia, "Times New Roman", serif;
   color: var(--dark);
 }
 
-/* Main heading intentionally smaller than the welcome text */
+/* Tagline now matches the welcome heading's font style */
 h1 {
+  font-family: Arial, sans-serif;
+  color: var(--green);
   max-width: 100%;
   margin: 12px auto 15px;
-  font-size: 18px;
-  line-height: 1.5;
-  font-weight: normal;
-  letter-spacing: 0;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: bold;
+  letter-spacing: 2px;
   white-space: nowrap;
 }
 
@@ -131,7 +163,12 @@ h1 {
 }
 
 .button:hover { background: var(--dark); }
-.button-outline { background: transparent; color: var(--green); }
+
+.button-outline {
+  background: transparent;
+  color: var(--green);
+}
+
 .hero .button { margin: 5px; }
 
 .trust {
@@ -151,10 +188,20 @@ section { padding: 60px 0; }
   margin: 0 auto 30px;
 }
 
-.section-heading h2 { font-size: 32px; margin-bottom: 10px; }
-.section-heading p { color: var(--muted); font-size: 14px; }
+.section-heading h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
 
-.search-box { max-width: 520px; margin: 0 auto 30px; }
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.search-box {
+  max-width: 520px;
+  margin: 0 auto 30px;
+}
 
 .search-box input {
   width: 100%;
@@ -219,9 +266,22 @@ section { padding: 60px 0; }
   gap: 8px;
 }
 
-.price { font-size: 19px; font-weight: bold; color: var(--green); }
-.product-bottom .button { padding: 9px 12px; font-size: 12px; }
-.no-results { display: none; text-align: center; padding: 25px; }
+.price {
+  font-size: 19px;
+  font-weight: bold;
+  color: var(--green);
+}
+
+.product-bottom .button {
+  padding: 9px 12px;
+  font-size: 12px;
+}
+
+.no-results {
+  display: none;
+  text-align: center;
+  padding: 25px;
+}
 
 .soft-section { background: white; }
 
@@ -239,9 +299,21 @@ section { padding: 60px 0; }
 }
 
 .feature .symbol { font-size: 28px; }
-.feature h3, .step h3 { color: var(--dark); margin: 8px 0; }
-.feature p, .step p { font-size: 14px; color: var(--muted); }
-.step { text-align: center; padding: 15px; }
+
+.feature h3, .step h3 {
+  color: var(--dark);
+  margin: 8px 0;
+}
+
+.feature p, .step p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.step {
+  text-align: center;
+  padding: 15px;
+}
 
 .step-number {
   width: 45px;
@@ -255,10 +327,21 @@ section { padding: 60px 0; }
   font-weight: bold;
 }
 
-.about-box { max-width: 800px; margin: auto; text-align: center; }
-.about-box p { color: var(--muted); margin-bottom: 14px; }
+.about-box {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
 
-.faq-list { max-width: 800px; margin: auto; }
+.about-box p {
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: auto;
+}
 
 .faq-list details {
   padding: 17px;
@@ -268,8 +351,17 @@ section { padding: 60px 0; }
   margin-bottom: 12px;
 }
 
-.faq-list summary { cursor: pointer; color: var(--dark); font-weight: bold; }
-.faq-list details p { margin-top: 10px; font-size: 14px; color: var(--muted); }
+.faq-list summary {
+  cursor: pointer;
+  color: var(--dark);
+  font-weight: bold;
+}
+
+.faq-list details p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
 
 .contact-box {
   max-width: 650px;
@@ -281,10 +373,22 @@ section { padding: 60px 0; }
   border-radius: 10px;
 }
 
-.contact-box p { color: var(--muted); margin: 12px 0; }
-.email-link { color: var(--green); font-weight: bold; overflow-wrap: anywhere; }
+.contact-box p {
+  color: var(--muted);
+  margin: 12px 0;
+}
 
-.policies { background: #f0f0e6; padding: 35px 0; text-align: center; }
+.email-link {
+  color: var(--green);
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+
+.policies {
+  background: #f0f0e6;
+  padding: 35px 0;
+  text-align: center;
+}
 
 .policy-links {
   display: flex;
@@ -294,9 +398,19 @@ section { padding: 60px 0; }
   margin-top: 12px;
 }
 
-.policy-links a { color: var(--green); text-decoration: underline; font-size: 13px; }
+.policy-links a {
+  color: var(--green);
+  text-decoration: underline;
+  font-size: 13px;
+}
 
-footer { background: var(--dark); color: white; text-align: center; padding: 25px 0; }
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+}
+
 footer p { font-size: 13px; }
 
 .back-top {
@@ -315,35 +429,80 @@ footer p { font-size: 13px; }
 
 @media (max-width: 950px) {
   .header-inner { flex-wrap: wrap; }
-  nav { justify-content: center; width: 100%; padding-bottom: 8px; }
-  .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  nav {
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 8px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 560px) {
   .header-inner { justify-content: center; }
-  .brand { width: 100%; justify-content: center; }
-  .brand-logo { width: 55px; height: 55px; }
-  .brand-name { font-size: 19px; }
-  nav { gap: 9px 14px; }
-  nav a { font-size: 12px; }
-  .hero { padding: 48px 0; }
-  .eyebrow { font-size: 18px; letter-spacing: 1px; }
-  h1 {
-    font-size: 16px;
-    white-space: normal;
-    letter-spacing: 0;
+
+  .brand {
+    width: 100%;
+    justify-content: center;
   }
+
+  .brand-logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .brand-name { font-size: 19px; }
+
+  nav { gap: 9px 14px; }
+
+  nav a { font-size: 12px; }
+
+  .hero { padding: 48px 0; }
+
+  .eyebrow {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  h1 {
+    font-family: Arial, sans-serif;
+    color: var(--green);
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    white-space: normal;
+  }
+
   .section-heading h2 { font-size: 28px; }
+
   .products-grid { gap: 12px; }
+
   .product-body { padding: 14px 11px; }
+
   .product-card h3 { font-size: 16px; }
+
   .product-card p { font-size: 12px; }
-  .product-bottom { align-items: flex-start; flex-direction: column; }
+
+  .product-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .product-bottom .button { width: 100%; }
+
   .price { font-size: 18px; }
+
   .product-art { min-height: 110px; }
+
   .product-art span { font-size: 38px; }
-  .features-grid, .steps-grid { grid-template-columns: 1fr; }
+
+  .features-grid, .steps-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
@@ -359,6 +518,7 @@ footer p { font-size: 13px; }
         <span class="tagline">LEARN • CREATE • GROW</span>
       </span>
     </a>
+
     <nav aria-label="Main navigation">
       <a href="#home">Home</a>
       <a href="#products">Products</a>
@@ -407,6 +567,7 @@ footer p { font-size: 13px; }
     </div>
 
     <div class="products-grid" id="productsGrid">
+
       <article class="product-card" data-search="raita recipe ebook cooking food indian">
         <div class="product-art"><span>🥣</span></div>
         <div class="product-body">
@@ -454,11 +615,14 @@ footer p { font-size: 13px; }
           </div>
         </div>
       </article>
+
     </div>
+
     <p class="no-results" id="noResults">No matching products found. Try another search.</p>
   </div>
 </section>
-</main>
+    </main>
+    
 <section class="soft-section" id="why-us">
   <div class="container">
     <div class="section-heading">
@@ -466,17 +630,20 @@ footer p { font-size: 13px; }
       <h2>Resources Made With Purpose</h2>
       <p>We aim to make everyday learning and creativity simpler and more accessible.</p>
     </div>
+
     <div class="features-grid">
       <div class="feature">
         <div class="symbol">📥</div>
         <h3>Digital Convenience</h3>
         <p>Access digital resources without waiting for physical delivery.</p>
       </div>
+
       <div class="feature">
         <div class="symbol">🌱</div>
         <h3>Learn and Grow</h3>
         <p>Discover practical resources for children, families and everyday life.</p>
       </div>
+
       <div class="feature">
         <div class="symbol">💚</div>
         <h3>Thoughtfully Created</h3>
@@ -493,17 +660,20 @@ footer p { font-size: 13px; }
       <h2>How It Works</h2>
       <p>Your digital product journey in three simple steps.</p>
     </div>
+
     <div class="steps-grid">
       <div class="step">
         <div class="step-number">1</div>
         <h3>Choose a Product</h3>
         <p>Browse the collection and select the resource you need.</p>
       </div>
+
       <div class="step">
         <div class="step-number">2</div>
         <h3>Complete Payment</h3>
         <p>Use the payment link provided for your selected product.</p>
       </div>
+
       <div class="step">
         <div class="step-number">3</div>
         <h3>Receive Your Download</h3>
@@ -518,11 +688,13 @@ footer p { font-size: 13px; }
     <div class="about-box">
       <span class="eyebrow">OUR STORY</span>
       <h2>About Aarambh Digital Resources</h2>
+
       <p>
         Aarambh Digital Resources is a growing digital-products
         initiative focused on useful ebooks, printable worksheets,
         creative learning materials and everyday resources.
       </p>
+
       <p>
         Our goal is to make digital resources easy to discover and
         convenient to use, whether you are learning something new,
@@ -539,23 +711,28 @@ footer p { font-size: 13px; }
       <span class="eyebrow">NEED HELP?</span>
       <h2>Frequently Asked Questions</h2>
     </div>
+
     <div class="faq-list">
       <details>
         <summary>What products do you offer?</summary>
         <p>We offer digital resources such as recipe ebooks, kids' drawing sheets and preschool worksheets.</p>
       </details>
+
       <details>
         <summary>Are these physical products?</summary>
         <p>The products listed here are intended as digital resources. Please check each product description before purchasing.</p>
       </details>
+
       <details>
         <summary>How will I receive my purchased PDF?</summary>
         <p>Delivery depends on the payment and delivery system configured for the product. Please check the purchase instructions or contact us for assistance.</p>
       </details>
+
       <details>
         <summary>What should I do if I have a payment problem?</summary>
         <p>Email us with your order details and a description of the issue. Never email your card PIN or payment password.</p>
       </details>
+
       <details>
         <summary>Can I request a refund?</summary>
         <p>Please review our Refund Policy before purchasing. Refund eligibility is governed by the published policy and applicable consumer-protection laws.</p>
@@ -569,11 +746,15 @@ footer p { font-size: 13px; }
     <div class="contact-box">
       <span class="eyebrow">WE ARE HERE TO HELP</span>
       <h2>Contact Us</h2>
+
       <p>Have a question about a product, order or digital download? Get in touch by email.</p>
+
       <a class="email-link" href="mailto:aarambhdigitalresources@gmail.com">
         aarambhdigitalresources@gmail.com
       </a>
+
       <p>We will respond as soon as we can.</p>
+
       <a class="button" href="mailto:aarambhdigitalresources@gmail.com">Email Us</a>
     </div>
   </div>
@@ -583,6 +764,7 @@ footer p { font-size: 13px; }
   <div class="container">
     <h2>Our Policies</h2>
     <p>Please review our policies before placing an order.</p>
+
     <div class="policy-links">
       <a href="privacy-policy.html">Privacy Policy</a>
       <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
@@ -614,9 +796,11 @@ searchInput.addEventListener("input", function () {
   productCards.forEach(function (card) {
     const searchableText =
       (card.innerText + " " + card.dataset.search).toLowerCase();
+
     const matches = searchableText.includes(query);
 
     card.style.display = matches ? "flex" : "none";
+
     if (matches) visibleCount++;
   });
 
