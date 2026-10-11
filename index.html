@@ -1224,4 +1224,92 @@ async function buyRaita(event) {
 </script>
 
 </body>
+<script>
+window.buyRaita = async function (event) {
+  if (event) event.preventDefault();
+
+  const button = event ? event.currentTarget : null;
+
+  if (button) {
+    button.disabled = true;
+    button.textContent = "Opening checkout...";
+  }
+
+  try {
+    const response = await fetch(
+      "https://winter-king-277b.amritasinghbhati140292.workers.dev/create-order",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ amount: 4900 })
+      }
+    );
+
+    const order = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        order.error || order.message || "Could not create payment order."
+      );
+    }
+
+    if (
+      !order.key_id ||
+      !order.order_id ||
+      !order.amount ||
+      !order.currency
+    ) {
+      throw new Error("Payment order details are incomplete.");
+    }
+
+    if (typeof window.Razorpay === "undefined") {
+      throw new Error("Razorpay checkout did not load.");
+    }
+
+    const checkout = new window.Razorpay({
+      key: order.key_id,
+      amount: order.amount,
+      currency: order.currency,
+      order_id: order.order_id,
+      name: "Aarambh Digital Resources",
+      description: "10 Delicious Raita Recipes",
+      theme: { color: "#285c46" },
+
+      handler: function () {
+        alert(
+          "Payment response received. PDF delivery is not yet confirmed."
+        );
+      },
+
+      modal: {
+        ondismiss: function () {
+          if (button) {
+            button.disabled = false;
+            button.textContent = "Buy Now";
+          }
+        }
+      }
+    });
+
+    checkout.on("payment.failed", function (failure) {
+      alert(
+        "Payment failed: " +
+        (failure.error?.description || "Please try again.")
+      );
+    });
+
+    checkout.open();
+
+  } catch (error) {
+    alert("Checkout error: " + error.message);
+  } finally {
+    if (button) {
+      button.disabled = false;
+      button.textContent = "Buy Now";
+    }
+  }
+};
+</script>
 </html>
