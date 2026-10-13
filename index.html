@@ -9,6 +9,52 @@
 <meta name="description" content="Discover digital ebooks, raita recipes, kids drawing worksheets, bedtime stories and preschool tracing worksheets at Aarambh Digital Resources.">
 <meta name="theme-color" content="#f8f5ec">
 
+/* Social media icons */
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 22px 0 18px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 50%;
+  background: #ffffff;
+  color: #285c46;
+  transition: transform .2s, background .2s;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  background: #e7efe6;
+}
+
+.social-links svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.social-heading {
+  margin-top: 22px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .social-links {
+    gap: 12px;
+  }
+}
 <style>
 :root {
   --green: #285c46;
@@ -860,6 +906,58 @@ footer p,
   <div class="container">
     <p><strong>Aarambh Digital Resources</strong></p>
     <p>LEARN • CREATE • GROW</p>
+    
+<p class="social-heading">FOLLOW AARAMBH</p>
+
+<div class="social-links" aria-label="Follow Aarambh Digital Resources">
+
+  <a href="https://in.pinterest.com/aarambhdigitalresources/_profile/"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Pinterest" title="Pinterest">
+    <svg viewBox="0 0 24 24" fill="#E60023" aria-hidden="true">
+      <path d="M12 2a10 10 0 0 0-3.64 19.31c-.02-.78 0-1.72.19-2.57l1.35-5.72s-.34-.67-.34-1.66c0-1.56.91-2.73 2.04-2.73.96 0 1.43.72 1.43 1.59 0 .97-.62 2.43-.94 3.78-.27 1.13.57 2.05 1.68 2.05 2.02 0 3.58-2.13 3.58-5.2 0-2.72-1.96-4.62-4.76-4.62-3.24 0-5.14 2.43-5.14 4.94 0 .98.38 2.04.85 2.62.09.11.1.21.07.32l-.32 1.29c-.05.21-.17.26-.39.16-1.42-.66-2.31-2.74-2.31-4.41 0-3.59 2.61-6.89 7.53-6.89 3.95 0 7.02 2.82 7.02 6.58 0 3.93-2.48 7.1-5.92 7.1-1.16 0-2.25-.61-2.62-1.33l-.71 2.71c-.25.94-.92 2.12-1.37 2.84A10 10 0 1 0 12 2z"/>
+    </svg>
+  </a>
+
+  <a href="https://www.linkedin.com/in/aarambh-digital-resources-a4225b443/"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="LinkedIn" title="LinkedIn">
+    <svg viewBox="0 0 24 24" fill="#0A66C2" aria-hidden="true">
+      <path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52zM7.93 18.9H4.96V9.34h2.97v9.56zM6.45 8.03a1.72 1.72 0 1 1 .02-3.44 1.72 1.72 0 0 1-.02 3.44zM19.05 18.9h-2.97v-4.65c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.77V9.34h2.85v1.31h.04c.4-.75 1.37-1.55 2.81-1.55 3.01 0 3.58 1.98 3.58 4.56v5.24z"/>
+    </svg>
+  </a>
+
+  <a href="https://www.facebook.com/share/1DR2fyNnjs/"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Facebook" title="Facebook">
+    <svg viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true">
+      <path d="M24 12a12 12 0 1 0-13.88 11.86v-8.39H7.08V12h3.04V9.35c0-3 1.79-4.66 4.52-4.66 1.31 0 2.68.23 2.68.23v2.95h-1.51c-1.49 0-1.95.93-1.95 1.88V12h3.32l-.53 3.47h-2.79v8.39A12 12 0 0 0 24 12z"/>
+    </svg>
+  </a>
+
+  <a href="https://www.instagram.com/aarambhdigitalresources/"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Instagram" title="Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#C13584"
+         stroke-width="2" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="1" fill="#C13584" stroke="none"/>
+    </svg>
+  </a>
+
+  <a href="https://x.com/Aarambhdigital_"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="X" title="X">
+    <svg viewBox="0 0 24 24" fill="#000000" aria-hidden="true">
+      <path d="M18.9 2H22l-6.78 7.75L23.2 22h-6.25l-4.9-7.41L5.56 22H2.42l7.25-8.29L1.8 2h6.4l4.43 6.76L18.9 2zm-1.1 18h1.73L7.28 3.89H5.42L17.8 20z"/>
+    </svg>
+  </a>
+
+</div>
+
+<p>Learn • Create • Grow</p>
+<p>&copy; 2026 Aarambh Digital Resources. All rights reserved.</p>
 
     <div class="footer-links">
       <a href="#home">Home</a>
@@ -882,6 +980,7 @@ footer p,
 
     <p>© <span id="currentYear"></span> Aarambh Digital Resources. All rights reserved.</p>
   </div>
+  
 </footer>
 
 <button id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
