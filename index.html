@@ -259,6 +259,24 @@ section {
   outline-color: var(--green);
 }
 
+#productCategory {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 13px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--cream);
+  color: var(--text);
+  outline-color: var(--green);
+}
+
+#categoryPrompt {
+  margin: 0 0 18px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -648,17 +666,28 @@ footer p,
       </div>
 
       <div class="search-wrap">
+        <label for="productCategory" style="display:block; margin-bottom:6px; color:var(--dark-green); font-weight:bold;">Explore by category</label>
+        <select id="productCategory" aria-label="Choose a product category">
+          <option value="" selected>Choose a product category...</option>
+          <option value="planners">Planners &amp; Journals</option>
+          <option value="ebooks">Ebooks &amp; Recipes</option>
+          <option value="kids">Kids Learning &amp; Worksheets</option>
+          <option value="english">English Learning</option>
+          <option value="other">Other Digital Products</option>
+          <option value="all">Show All Products</option>
+        </select>
         <input
           type="search"
           id="productSearch"
-          placeholder="Search digital resources..."
+          placeholder="Search within selected category..."
           aria-label="Search digital resources"
         >
       </div>
+      <p id="categoryPrompt" role="status">Choose a category above to explore our digital products.</p>
 
       <div class="product-grid" id="productGrid">
 
-        <article class="product-card" data-search="raita recipes food cooking ebook indian recipes">
+        <article class="product-card" data-category="ebooks" data-search="raita recipes food cooking ebook indian recipes">
           <div class="product-icon" aria-hidden="true">🥣</div>
           <h3>10 Delicious Raita Recipes</h3>
           <p>Discover ten delicious raita ideas to complement your everyday meals.</p>
@@ -667,7 +696,7 @@ footer p,
         </article>
 
         
-<article class="product-card" data-search="chutney recipes indian food cooking ebook homemade garlic mint coconut">
+<article class="product-card" data-category="ebooks" data-search="chutney recipes indian food cooking ebook homemade garlic mint coconut">
   <div class="product-icon" aria-hidden="true">🌶️</div>
   <h3>10 Delicious Homemade Indian Chutney Recipes</h3>
   <p>Discover 10 delicious homemade Indian chutney recipes with easy instructions, serving suggestions and storage tips.</p>
@@ -676,7 +705,7 @@ footer p,
 </article>
         
 
-        <article class="product-card" data-search="kids drawing worksheets children art drawing activities printable">
+        <article class="product-card" data-category="kids" data-search="kids drawing worksheets children art drawing activities printable">
           <div class="product-icon" aria-hidden="true">🎨</div>
           <h3>Kids Drawing Worksheets</h3>
           <p>Creative drawing activities to encourage children's imagination and artistic skills.</p>
@@ -684,7 +713,7 @@ footer p,
           <a class="button" href="https://payhip.com/b/P8pZG" target="_blank" rel="noopener noreferrer">Buy Now</a>
         </article>
 
-        <article class="product-card" data-search="bedtime stories kids children story ebook bedtime">
+        <article class="product-card" data-category="kids" data-search="bedtime stories kids children story ebook bedtime">
           <div class="product-icon" aria-hidden="true">🌙</div>
           <h3>Bedtime Stories</h3>
           <p>Gentle storytime reading for little listeners and special family moments.</p>
@@ -692,7 +721,7 @@ footer p,
           <a class="button" href="https://payhip.com/b/hN18q" target="_blank" rel="noopener noreferrer">Buy Now</a>
         </article>
 
-        <article class="product-card" data-search="preschool kids tracing worksheets tracing lines letters early learning printable">
+        <article class="product-card" data-category="kids" data-search="preschool kids tracing worksheets tracing lines letters early learning printable">
           <div class="product-icon" aria-hidden="true">✏️</div>
           <h3>Preschool Kids Tracing Worksheets</h3>
           <p>Early-learning tracing activities for little hands developing pencil control.</p>
@@ -700,7 +729,7 @@ footer p,
           <a class="button" href="https://payhip.com/b/um6Ef" target="_blank" rel="noopener noreferrer">Buy Now</a>
         </article>
 
-        <article class="product-card" data-search="weekly planner productivity planning tasks habits">
+        <article class="product-card" data-category="planners" data-search="weekly planner productivity planning tasks habits">
           <div class="product-icon" aria-hidden="true">📒</div>
           <h3>Complete Weekly Planner</h3>
           <p>Plan your week, organize priorities, track tasks, and build better habits.</p>
@@ -708,7 +737,7 @@ footer p,
           <a class="button" href="https://payhip.com/b/5ARn4" target="_blank" rel="noopener noreferrer">Buy Now</a>
         </article>
 
-        <article class="product-card" data-search="30 day self improvement challenge personal growth habits motivation">
+        <article class="product-card" data-category="planners" data-search="30 day self improvement challenge personal growth habits motivation">
           <div class="product-icon" aria-hidden="true">🌱</div>
           <h3>30-Day Self-Improvement Challenge</h3>
           <p>Build positive habits, reflect on your progress, and take small steps towards personal growth.</p>
@@ -716,7 +745,7 @@ footer p,
           <a class="button" href="https://payhip.com/b/5jEsJ" target="_blank" rel="noopener noreferrer">Buy Now</a>
         </article>
 
-        <article class="product-card" data-search="50 ChatGPT prompts ebook AI productivity writing learning money management">
+        <article class="product-card" data-category="other" data-search="50 ChatGPT prompts ebook AI productivity writing learning money management">
           <div class="product-icon" aria-hidden="true">🤖</div>
           <h3>50 ChatGPT Prompts e-book</h3>
           <p>A practical e-book featuring 50 prompts to help with productivity, learning, writing and everyday tasks.</p>
@@ -725,7 +754,7 @@ footer p,
         </article>
         
 
-<article class="product-card" data-search="7 day home organization guide printable planner checklists decluttering home">
+<article class="product-card" data-category="planners" data-search="7 day home organization guide printable planner checklists decluttering home">
   <div class="product-icon" aria-hidden="true">🏡</div>
 
   <h3>The 7-Day Home Organization Guide</h3>
@@ -748,7 +777,7 @@ footer p,
   </a>
 </article>
         
-<article class="product-card" data-search="english grammar complete guide ebook learn grammar tenses parts of speech">
+<article class="product-card" data-category="english" data-search="english grammar complete guide ebook learn grammar tenses parts of speech">
   <div class="product-icon" aria-hidden="true">📘</div>
 
   <h3>English Grammar Complete Guide eBook</h3>
@@ -773,7 +802,7 @@ footer p,
         
       </div>
 
-      <p id="noResults" role="status">No matching resources found. Try another search.</p>
+      <p id="noResults" role="status">No matching resources found. Try another search or choose a different category.</p>
     </div>
   </section>
 
@@ -995,29 +1024,37 @@ footer p,
 <button id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
 
 <script>
-/* PRODUCT SEARCH */
+/* PRODUCT CATEGORY + SEARCH FILTER */
 const searchInput = document.getElementById("productSearch");
+const categorySelect = document.getElementById("productCategory");
 const productCards = document.querySelectorAll(".product-card");
 const noResults = document.getElementById("noResults");
+const categoryPrompt = document.getElementById("categoryPrompt");
 
-searchInput.addEventListener("input", function () {
-  const query = this.value.toLowerCase().trim();
+function filterProducts() {
+  const selectedCategory = categorySelect.value;
+  const query = searchInput.value.toLowerCase().trim();
   let visibleCount = 0;
 
   productCards.forEach(function (card) {
+    const categoryMatches = selectedCategory === "all" ||
+      (selectedCategory !== "" && card.dataset.category === selectedCategory);
     const searchableText =
       (card.innerText + " " + (card.dataset.search || "")).toLowerCase();
+    const searchMatches = searchableText.includes(query);
+    const matches = categoryMatches && searchMatches;
 
-    const matches = searchableText.includes(query);
     card.style.display = matches ? "flex" : "none";
-
-    if (matches) {
-      visibleCount++;
-    }
+    if (matches) visibleCount++;
   });
 
-  noResults.style.display = visibleCount === 0 ? "block" : "none";
-});
+  categoryPrompt.style.display = selectedCategory === "" ? "block" : "none";
+  noResults.style.display = selectedCategory !== "" && visibleCount === 0 ? "block" : "none";
+}
+
+categorySelect.addEventListener("change", filterProducts);
+searchInput.addEventListener("input", filterProducts);
+filterProducts();
 
 /* AUTOMATIC COPYRIGHT YEAR */
 document.getElementById("currentYear").textContent =
