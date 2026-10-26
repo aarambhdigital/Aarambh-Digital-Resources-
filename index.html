@@ -259,7 +259,8 @@ section {
   outline-color: var(--green);
 }
 
-#productCategory {
+#productCategory,
+#priceSort {
   width: 100%;
   margin-bottom: 12px;
   padding: 13px 16px;
@@ -683,6 +684,12 @@ footer p,
           placeholder="Search within selected category..."
           aria-label="Search digital resources"
         >
+        <label for="priceSort" style="display:block; margin:12px 0 6px; color:var(--dark-green); font-weight:bold;">Sort products by price</label>
+        <select id="priceSort" aria-label="Sort products by price">
+          <option value="default">Default order</option>
+          <option value="low-high">Price: Low to High</option>
+          <option value="high-low">Price: High to Low</option>
+        </select>
       </div>
       <p id="categoryPrompt" role="status">Choose a category above to explore our digital products.</p>
 
@@ -1063,19 +1070,35 @@ footer p,
 <button id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
 
 <script>
-/* PRODUCT CATEGORY + SEARCH FILTER */
+/* PRODUCT CATEGORY + SEARCH + PRICE SORT */
 const searchInput = document.getElementById("productSearch");
 const categorySelect = document.getElementById("productCategory");
-const productCards = document.querySelectorAll(".product-card");
+const priceSort = document.getElementById("priceSort");
+const productGrid = document.getElementById("productGrid");
+const productCards = Array.from(document.querySelectorAll(".product-card"));
 const noResults = document.getElementById("noResults");
 const categoryPrompt = document.getElementById("categoryPrompt");
+
+function getProductPrice(card) {
+  const priceText = card.querySelector(".product-price").textContent;
+  return Number(priceText.replace(/[^0-9.]/g, "")) || 0;
+}
 
 function filterProducts() {
   const selectedCategory = categorySelect.value;
   const query = searchInput.value.toLowerCase().trim();
+  const sortOrder = priceSort.value;
   let visibleCount = 0;
 
-  productCards.forEach(function (card) {
+  const sortedCards = productCards.slice();
+  if (sortOrder === "low-high") {
+    sortedCards.sort((a, b) => getProductPrice(a) - getProductPrice(b));
+  } else if (sortOrder === "high-low") {
+    sortedCards.sort((a, b) => getProductPrice(b) - getProductPrice(a));
+  }
+
+  sortedCards.forEach(function (card) {
+    productGrid.appendChild(card);
     const categoryMatches = selectedCategory === "all" ||
       (selectedCategory !== "" && card.dataset.category === selectedCategory);
     const searchableText =
@@ -1093,6 +1116,7 @@ function filterProducts() {
 
 categorySelect.addEventListener("change", filterProducts);
 searchInput.addEventListener("input", filterProducts);
+priceSort.addEventListener("change", filterProducts);
 filterProducts();
 
 /* AUTOMATIC COPYRIGHT YEAR */
