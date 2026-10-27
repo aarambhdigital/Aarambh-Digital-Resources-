@@ -280,17 +280,14 @@ section {
   box-shadow: var(--shadow);
 }
 
-.product-icon {
-  display: grid;
-  place-items: center;
-  width: 58px;
-  height: 58px;
+.product-cover {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
   margin-bottom: 15px;
-  border-radius: 50%;
-  background: var(--light-green);
-  font-size: 30px;
+  border-radius: 8px;
 }
-
 .product-card h3 {
   margin: 0 0 10px;
   color: var(--dark-green);
@@ -681,7 +678,7 @@ footer p,
       <div class="product-grid" id="productGrid">
 
         <article class="product-card" data-search="raita recipes food cooking ebook indian recipes" data-category="ebooks">
-          <div class="product-icon" aria-hidden="true">🥣</div>
+          <img class="product-cover" src="10_raita_receipe.jpg" alt="10 Delicious Raita Recipes" loading="lazy">
           <h3>10 Delicious Raita Recipes</h3>
           <p>Discover ten delicious raita ideas to complement your everyday meals.</p>
           <div class="product-price">₹49</div>
