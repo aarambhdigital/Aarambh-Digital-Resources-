@@ -260,10 +260,30 @@ section {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
 }
 
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--cream);
+  box-shadow: var(--shadow);
+}
+
+.product-cover {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
 @media (max-width: 600px) {
   .product-grid {
     grid-template-columns: 1fr;
