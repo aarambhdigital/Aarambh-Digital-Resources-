@@ -259,25 +259,6 @@ section {
   outline-color: var(--green);
 }
 
-#productCategory,
-#priceSort {
-  width: 100%;
-  margin-bottom: 12px;
-  padding: 13px 16px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--cream);
-  color: var(--text);
-  outline-color: var(--green);
-}
-
-#categoryPrompt {
-  margin: 0 0 18px;
-  text-align: center;
-  color: var(--muted);
-  font-size: 14px;
-}
-
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -674,8 +655,8 @@ footer p,
           <option value="ebooks">Ebooks &amp; Recipes</option>
           <option value="kids">Kids Learning &amp; Worksheets</option>
           <option value="english">English Learning</option>
-          <option value="ai-tools">AI Tools & Technology</option>
-          <option value="AI">Other Digital Products</option>
+          <option value="ai-tools">AI Tools &amp; Technology</option>
+          <option value="other">Other Digital Products</option>
           <option value="all">Show All Products</option>
         </select>
         <input
@@ -694,8 +675,8 @@ footer p,
       <p id="categoryPrompt" role="status">Choose a category above to explore our digital products.</p>
 
       <div class="product-grid" id="productGrid">
-        
-        <article class="product-card" data-category="ebooks" data-search="raita recipes food cooking ebook indian recipes">
+
+        <article class="product-card" data-search="raita recipes food cooking ebook indian recipes" data-category="ebooks">
           <div class="product-icon" aria-hidden="true">🥣</div>
           <h3>10 Delicious Raita Recipes</h3>
           <p>Discover ten delicious raita ideas to complement your everyday meals.</p>
@@ -704,7 +685,7 @@ footer p,
         </article>
 
         
-<article class="product-card" data-category="ebooks" data-search="chutney recipes indian food cooking ebook homemade garlic mint coconut">
+<article class="product-card" data-search="chutney recipes indian food cooking ebook homemade garlic mint coconut" data-category="ebooks">
   <div class="product-icon" aria-hidden="true">🌶️</div>
   <h3>10 Delicious Homemade Indian Chutney Recipes</h3>
   <p>Discover 10 delicious homemade Indian chutney recipes with easy instructions, serving suggestions and storage tips.</p>
@@ -713,15 +694,47 @@ footer p,
 </article>
         
 
-        <article class="product-card" data-category="kids" data-search="kids drawing worksheets children art drawing activities printable">
-          <div class="product-icon" aria-hidden="true">🎨</div>
-          <h3>Kids Drawing Worksheets</h3>
-          <p>Creative drawing activities to encourage children's imagination and artistic skills.</p>
-          <div class="product-price">₹119</div>
-          <a class="button" href="https://payhip.com/b/P8pZG" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        <article class="product-card" data-search="fun tracing activities kids pre-writing practice preschool worksheets printable" data-category="kids">
+          <div class="product-icon" aria-hidden="true">✏️</div>
+          <h3>Fun Tracing Activities for Kids</h3>
+          <p>110 pre-writing practice activities to help children build early writing skills. 54 pages.</p>
+          <div class="product-price">View price on Payhip</div>
+          <a class="button" href="https://payhip.com/b/JILoY" target="_blank" rel="noopener noreferrer">Buy Now</a>
         </article>
 
-        <article class="product-card" data-category="kids" data-search="bedtime stories kids children story ebook bedtime">
+        <article class="product-card" data-search="fun matching activities kids preschool matching games learning printable" data-category="kids">
+          <div class="product-icon" aria-hidden="true">🔗</div>
+          <h3>Fun Matching Activities for Kids</h3>
+          <p>100 matching games for preschool learning and skill development. 55 pages.</p>
+          <div class="product-price">View price on Payhip</div>
+          <a class="button" href="https://payhip.com/b/kTFD1" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+        <article class="product-card" data-search="fun puzzle activities kids brain games problem solving printable" data-category="kids">
+          <div class="product-icon" aria-hidden="true">🧩</div>
+          <h3>Fun Puzzle Activities for Kids</h3>
+          <p>120 brain games and problem-solving activities to encourage logical thinking. 75 pages.</p>
+          <div class="product-price">View price on Payhip</div>
+          <a class="button" href="https://payhip.com/b/rqZ0l" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+        <article class="product-card" data-search="fun colouring activities kids creative colouring printable pages" data-category="kids">
+          <div class="product-icon" aria-hidden="true">🖍️</div>
+          <h3>Fun Colouring Activities for Kids</h3>
+          <p>80 creative colouring activities for children. 89 pages.</p>
+          <div class="product-price">View price on Payhip</div>
+          <a class="button" href="https://payhip.com/b/w28nV" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+        <article class="product-card" data-search="fun vocabulary activities kids early learning vocabulary words printable" data-category="kids">
+          <div class="product-icon" aria-hidden="true">📚</div>
+          <h3>Fun Vocabulary Activities for Kids</h3>
+          <p>90 early-learning and vocabulary activities to build children's word knowledge. 54 pages.</p>
+          <div class="product-price">View price on Payhip</div>
+          <a class="button" href="https://payhip.com/b/Etyix" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </article>
+
+        <article class="product-card" data-search="bedtime stories kids children story ebook bedtime" data-category="kids">
           <div class="product-icon" aria-hidden="true">🌙</div>
           <h3>Bedtime Stories</h3>
           <p>Gentle storytime reading for little listeners and special family moments.</p>
@@ -729,7 +742,7 @@ footer p,
           <a class="button" href="https://payhip.com/b/hN18q" target="_blank" rel="noopener noreferrer">Buy Now</a>
         </article>
 
-        <article class="product-card" data-category="kids" data-search="preschool kids tracing worksheets tracing lines letters early learning printable">
+        <article class="product-card" data-search="preschool kids tracing worksheets tracing lines letters early learning printable" data-category="kids">
           <div class="product-icon" aria-hidden="true">✏️</div>
           <h3>Preschool Kids Tracing Worksheets</h3>
           <p>Early-learning tracing activities for little hands developing pencil control.</p>
@@ -737,7 +750,7 @@ footer p,
           <a class="button" href="https://payhip.com/b/um6Ef" target="_blank" rel="noopener noreferrer">Buy Now</a>
         </article>
 
-        <article class="product-card" data-category="planners" data-search="weekly planner productivity planning tasks habits">
+        <article class="product-card" data-search="weekly planner productivity planning tasks habits" data-category="planners">
           <div class="product-icon" aria-hidden="true">📒</div>
           <h3>Complete Weekly Planner</h3>
           <p>Plan your week, organize priorities, track tasks, and build better habits.</p>
@@ -745,7 +758,7 @@ footer p,
           <a class="button" href="https://payhip.com/b/5ARn4" target="_blank" rel="noopener noreferrer">Buy Now</a>
         </article>
 
-        <article class="product-card" data-category="planners" data-search="30 day self improvement challenge personal growth habits motivation">
+        <article class="product-card" data-search="30 day self improvement challenge personal growth habits motivation" data-category="planners">
           <div class="product-icon" aria-hidden="true">🌱</div>
           <h3>30-Day Self-Improvement Challenge</h3>
           <p>Build positive habits, reflect on your progress, and take small steps towards personal growth.</p>
@@ -753,7 +766,7 @@ footer p,
           <a class="button" href="https://payhip.com/b/5jEsJ" target="_blank" rel="noopener noreferrer">Buy Now</a>
         </article>
 
-        <article class="product-card" data-category="ai-tools" data-search="50 ChatGPT prompts ebook AI productivity writing learning money management">
+        <article class="product-card" data-search="50 ChatGPT prompts ebook AI productivity writing learning money management" data-category="ai-tools">
           <div class="product-icon" aria-hidden="true">🤖</div>
           <h3>50 ChatGPT Prompts e-book</h3>
           <p>A practical e-book featuring 50 prompts to help with productivity, learning, writing and everyday tasks.</p>
@@ -762,7 +775,7 @@ footer p,
         </article>
         
 
-<article class="product-card" data-category="planners" data-search="7 day home organization guide printable planner checklists decluttering home">
+<article class="product-card" data-search="7 day home organization guide printable planner checklists decluttering home" data-category="planners">
   <div class="product-icon" aria-hidden="true">🏡</div>
 
   <h3>The 7-Day Home Organization Guide</h3>
@@ -785,7 +798,7 @@ footer p,
   </a>
 </article>
         
-<article class="product-card" data-category="english" data-search="english grammar complete guide ebook learn grammar tenses parts of speech">
+<article class="product-card" data-search="english grammar complete guide ebook learn grammar tenses parts of speech" data-category="english">
   <div class="product-icon" aria-hidden="true">📘</div>
 
   <h3>English Grammar Complete Guide eBook</h3>
@@ -807,52 +820,10 @@ footer p,
     Buy Now
   </a>
 </article>
-<article class="product-card" data-category="ebooks" data-search="15 delicious chilla recipes besan moong dal oats vegetable breakfast recipe ebook">
-  <div class="product-icon" aria-hidden="true">🥞</div>
-
-  <h3>15 Delicious Chilla Recipes</h3>
-
-  <p>
-    Discover 15 delicious chilla recipes for breakfast
-    and snacks. Explore tasty ideas for your everyday meals
-    with this digital recipe eBook.
-  </p>
-
-  <div class="product-price">₹149</div>
-
-  <a
-    class="button"
-    href="https://payhip.com/b/dFrH7"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Buy Now
-  </a>
-</article>
-      <article class="product-card" data-category="ai-tools" data-search="AI Tools AI Productivity eBook 2026 artificial intelligence productivity digital guide">
-        <div class="product-icon" aria-hidden="true">🤖</div>
-        <h3>AI Tools &amp; AI Productivity eBook 2026</h3>
-        <p>
-          Discover AI tools and explore smarter ways to improve
-          productivity, create content, learn new skills, and
-          simplify everyday tasks with this 18-page digital eBook.
-        </p>
-        <div class="product-price">₹119</div>
-        <a class="button" href="https://payhip.com/b/cHZ9k" target="_blank" rel="noopener noreferrer">
-          Buy Now
-        </a>
-      </article>
-
-        <article class="product-card" data-category="kids" data-search="500 Fun Learning Activities for Kids 302 page activity book children fun learning creative educational activities parents teachers homeschool">
-          <div class="product-icon" aria-hidden="true">📚</div>
-          <h3>500 Fun Learning Activities for Kids: The Ultimate 302-Page Activity Book for Children</h3>
-          <p>Explore a collection of 500 fun learning activity ideas designed to encourage children's curiosity, creativity and enjoyable learning at home or in the classroom.</p>
-          <div class="product-price">₹299</div>
-          <a class="button" href="https://payhip.com/b/VZY2R" target="_blank" rel="noopener noreferrer">Buy Now</a>
-        </article>
+        
       </div>
-      
- <p id="noResults" role="status">No matching resources found. Try another search or choose a different category.</p>
+
+      <p id="noResults" role="status">No matching resources found. Try another search.</p>
     </div>
   </section>
 
@@ -982,6 +953,10 @@ footer p,
   </div>
 </section>
 
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms & Conditions</a>
+<a href="refund.html">Refund Policy</a>
+<a href="delivery.html">Delivery Policy</a>
 </main>
 
 <footer>
@@ -1070,74 +1045,86 @@ footer p,
 <button id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
 
 <script>
-/* PRODUCT CATEGORY + SEARCH + PRICE SORT */
+/* CATEGORY FILTER, PRODUCT SEARCH AND PRICE SORT */
 const searchInput = document.getElementById("productSearch");
 const categorySelect = document.getElementById("productCategory");
 const priceSort = document.getElementById("priceSort");
 const productGrid = document.getElementById("productGrid");
-const productCards = Array.from(document.querySelectorAll(".product-card"));
+const productCards = Array.from(productGrid.querySelectorAll(".product-card"));
 const noResults = document.getElementById("noResults");
 const categoryPrompt = document.getElementById("categoryPrompt");
+const originalOrder = new Map(productCards.map((card, index) => [card, index]));
 
-function getProductPrice(card) {
-  const priceText = card.querySelector(".product-price").textContent;
-  return Number(priceText.replace(/[^0-9.]/g, "")) || 0;
+function getPrice(card) {
+  const text = card.querySelector(".product-price")?.textContent || "";
+  const match = text.replace(/,/g, "").match(/₹\s*(\d+(?:\.\d+)?)/);
+  return match ? Number(match[1]) : null;
 }
 
-function filterProducts() {
+function updateProducts() {
   const selectedCategory = categorySelect.value;
   const query = searchInput.value.toLowerCase().trim();
-  const sortOrder = priceSort.value;
   let visibleCount = 0;
 
-  const sortedCards = productCards.slice();
-  if (sortOrder === "low-high") {
-    sortedCards.sort((a, b) => getProductPrice(a) - getProductPrice(b));
-  } else if (sortOrder === "high-low") {
-    sortedCards.sort((a, b) => getProductPrice(b) - getProductPrice(a));
+  const sortedCards = [...productCards];
+  if (priceSort.value === "low-high") {
+    sortedCards.sort((a, b) => {
+      const pa = getPrice(a), pb = getPrice(b);
+      if (pa === null && pb === null) return originalOrder.get(a) - originalOrder.get(b);
+      if (pa === null) return 1;
+      if (pb === null) return -1;
+      return pa - pb;
+    });
+  } else if (priceSort.value === "high-low") {
+    sortedCards.sort((a, b) => {
+      const pa = getPrice(a), pb = getPrice(b);
+      if (pa === null && pb === null) return originalOrder.get(a) - originalOrder.get(b);
+      if (pa === null) return 1;
+      if (pb === null) return -1;
+      return pb - pa;
+    });
+  } else {
+    sortedCards.sort((a, b) => originalOrder.get(a) - originalOrder.get(b));
   }
 
-  sortedCards.forEach(function (card) {
+  sortedCards.forEach(card => {
     productGrid.appendChild(card);
-    const categoryMatches = selectedCategory === "all" ||
-      (selectedCategory !== "" && card.dataset.category === selectedCategory);
-    const searchableText =
-      (card.innerText + " " + (card.dataset.search || "")).toLowerCase();
-    const searchMatches = searchableText.includes(query);
-    const matches = categoryMatches && searchMatches;
-
-    card.style.display = matches ? "flex" : "none";
-    if (matches) visibleCount++;
+    const categoryMatch = !selectedCategory || selectedCategory === "all" || card.dataset.category === selectedCategory;
+    const searchableText = (card.innerText + " " + (card.dataset.search || "")).toLowerCase();
+    const searchMatch = searchableText.includes(query);
+    const visible = categoryMatch && searchMatch;
+    card.style.display = visible ? "flex" : "none";
+    if (visible) visibleCount++;
   });
 
-  categoryPrompt.style.display = selectedCategory === "" ? "block" : "none";
-  noResults.style.display = selectedCategory !== "" && visibleCount === 0 ? "block" : "none";
+  noResults.style.display = visibleCount === 0 ? "block" : "none";
+  if (categoryPrompt) {
+    if (!selectedCategory) categoryPrompt.textContent = "Choose a category above to explore our digital products.";
+    else if (selectedCategory === "all") categoryPrompt.textContent = "Showing all digital products.";
+    else categoryPrompt.textContent = "Showing products in the selected category.";
+  }
 }
 
-categorySelect.addEventListener("change", filterProducts);
-searchInput.addEventListener("input", filterProducts);
-priceSort.addEventListener("change", filterProducts);
-filterProducts();
+searchInput.addEventListener("input", updateProducts);
+categorySelect.addEventListener("change", updateProducts);
+priceSort.addEventListener("change", updateProducts);
+updateProducts();
 
 /* AUTOMATIC COPYRIGHT YEAR */
-document.getElementById("currentYear").textContent =
-  new Date().getFullYear();
+const currentYear = document.getElementById("currentYear");
+if (currentYear) currentYear.textContent = new Date().getFullYear();
 
 /* BACK TO TOP */
 const backToTop = document.getElementById("backToTop");
-
-window.addEventListener("scroll", function () {
-  backToTop.style.display = window.scrollY > 300 ? "block" : "none";
-});
-
-backToTop.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+if (backToTop) {
+  window.addEventListener("scroll", function () {
+    backToTop.style.display = window.scrollY > 300 ? "block" : "none";
   });
-});
+  backToTop.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 </script>
 
 </body>
 </html>
-  
