@@ -539,7 +539,7 @@ footer a {
   }
 
   .product-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -590,7 +590,11 @@ footer a {
     font-size: 31px;
   }
 
-  .product-grid,
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
   .feature-grid,
   .steps,
   .policy-grid {
@@ -598,7 +602,11 @@ footer a {
   }
 
   .product-card {
-    padding: 23px;
+    padding: 8px;
+  }
+
+  .product-cover {
+    height: 130px;
   }
 
   .contact-box {
@@ -713,7 +721,6 @@ footer p,
         
 <article class="product-card" data-category="ebooks" data-search="15 delicious chilla recipes besan moong dal oats vegetable breakfast recipe ebook">
   <img class="product-cover" src="15_chilla_receipe.png" alt="15 Delicious Chilla Recipes" loading="lazy">
-  </div>
 
   <h3>15 Delicious Chilla Recipes</h3>
 
@@ -734,7 +741,6 @@ footer p,
     Buy Now
   </a>
 </article>
-        </div>
       
 <article class="product-card" data-category="ebooks" data-search="AI Tools AI Productivity eBook 2026 artificial intelligence productivity digital guide">
   <img class="product-cover" src="AI Tools and AI Productivity.jpg" alt="AI Tools and AI Productivity" loading="lazy">
@@ -799,7 +805,7 @@ footer p,
         </article>
 
       <article class="product-card" data-category="kids" data-search="500 Fun Learning Activities for Kids 302 page activity book children fun learning creative educational activities parents teachers homeschool">
-          <img class="product-cover" src="500_fun_learning.jpg" alt="500 Fun Learning Activities" loading="lazy"
+          <img class="product-cover" src="500_fun_learning.jpg" alt="500 Fun Learning Activities" loading="lazy">
           <h3>500 Fun Learning Activities for Kids: The Ultimate 302-Page Activity Book for Children</h3>
           <p>Explore a collection of 500 fun learning activity ideas designed to encourage children's curiosity, creativity and enjoyable learning at home or in the classroom.</p>
           <div class="product-price">₹299</div>
